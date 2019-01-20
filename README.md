@@ -11,3 +11,5 @@ var data = [
 ['C Series',[lattitude,longitude,magnitude,lattitude,longiude,magnitude,....  so on]],
 
 ];
+
+Series => Each Strip on Globe
