@@ -4,11 +4,11 @@ Globe Plotting data -
 
 var data = [ 
 
-['A Series',[lattitude,longitude,magnitude,lattitude,longiude,magnitude,....  so on]] , 
+['A Series',[lattitude,longitude,magnitude,lattitude,longiude,magnitude,....]] , 
 
-['B Series',[lattitude,longitude,magnitude,lattitude,longiude,magnitude,....  so on]] ,
+['B Series',[lattitude,longitude,magnitude,lattitude,longiude,magnitude,....]] ,
 
-['C Series',[lattitude,longitude,magnitude,lattitude,longiude,magnitude,....  so on]],
+['C Series',[lattitude,longitude,magnitude,lattitude,longiude,magnitude,....]],
 
 ];
 
