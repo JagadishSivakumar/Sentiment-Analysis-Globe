@@ -2,6 +2,7 @@
 
 ## Globe Plotting data - 
 
+### Original Globe plotting data
 var data = [ 
 
 ['A Series',[lattitude,longitude,magnitude,lattitude,longiude,magnitude,....]] , 
@@ -13,6 +14,11 @@ var data = [
 ];
 
 Series => Each Strip on Globe
+
+### Our Required Json 
+[ ' no.lines ' ,[ [lattitude,longitude,magnitude,lattitude,longiude,magnitude,....]] ,
+' no.lines ' ,[ [lattitude,longitude,magnitude,lattitude,longiude,magnitude,....]] ,
+]
 
 ## Cyclone.csv 
 [ ID, convId, date , time , user id, user_name , user full name , tweet, pic, pic link, retweet count,likes,hashtag,quotes,...]
