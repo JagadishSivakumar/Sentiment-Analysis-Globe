@@ -1,8 +1,21 @@
+/**
+ * dat.globe Javascript WebGL Globe Toolkit
+ * https://github.com/dataarts/webgl-globe
+ *
+ * Copyright 2011 Data Arts Team, Google Creative Lab
+ *
+ * Licensed under the Apache License, Version 2.0 (the 'License');
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ */
+
 var DAT = DAT || {};
 
 DAT.Globe = function(container, opts) {
   opts = opts || {};
-
+  
   var colorFn = opts.colorFn || function(x) {
     var c = new THREE.Color();
     c.setHSL( ( 0.6 - ( x * 0.5 ) ), 1.0, 0.5 );
@@ -81,8 +94,6 @@ DAT.Globe = function(container, opts) {
     w = container.offsetWidth || window.innerWidth;
     h = container.offsetHeight || window.innerHeight;
 
-
-//Globe View Camera
     camera = new THREE.PerspectiveCamera(30, w / h, 1, 10000);
     camera.position.z = distance;
 
@@ -125,7 +136,6 @@ DAT.Globe = function(container, opts) {
     mesh.scale.set( 1.1, 1.1, 1.1 );
     scene.add(mesh);
 
-//Stripes
     geometry = new THREE.BoxGeometry(0.75, 0.75, 1);
     geometry.applyMatrix(new THREE.Matrix4().makeTranslation(0,0,-0.5));
 
@@ -136,8 +146,6 @@ DAT.Globe = function(container, opts) {
 
     renderer.domElement.style.position = 'absolute';
 
-
-//Mouse Activity
     container.appendChild(renderer.domElement);
 
     container.addEventListener('mousedown', onMouseDown, false);
@@ -157,7 +165,6 @@ DAT.Globe = function(container, opts) {
     }, false);
   }
 
-//Globe Data
   function addData(data, opts) {
     var lat, lng, size, color, i, step, colorFnWrapper;
 
@@ -399,3 +406,4 @@ DAT.Globe = function(container, opts) {
   return this;
 
 };
+
