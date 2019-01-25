@@ -8,12 +8,13 @@
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom styles for this template -->
-        <link href="css/modern-business.css" rel="stylesheet">
 
 
     <style type="text/css">
       html {
         height: 100%;
+        max-height: 100%;
+        overflow-x:hidden;
       }
       body {
         margin: 0;
@@ -23,13 +24,12 @@
         font-family: sans-serif;
         font-size: 13px;
         line-height: 20px;
-        height: 100%;
       }
 
       #info {
 
         font-size: 11px;
-        position: absolute;x
+        position: absolute;
         bottom: 5px;
         background-color: rgba(0,0,0,0.8);
         border-radius: 3px;
@@ -55,7 +55,7 @@
         text-decoration: none;
       }
       a:hover {
-        text-decoration: underline;
+        text-decoration: none;
       }
 
       .bull {
@@ -74,63 +74,132 @@
         padding: 10px;
       }
 
-      .year {
-        font: 16px Georgia;
-        line-height: 26px;
-        height: 30px;
-        text-align: center;
-        float: left;
-        width: 90px;
-        color: rgba(255, 255, 255, 0.4);
+      
 
-        cursor: pointer;
-        -webkit-transition: all 0.1s ease-out;
-      }
-
-      .year:hover, .year.active {
-        font-size: 20px;
-        color: #fff;
-      }
-
-      #ce span {
-        display: none;
-      }
-
+      
       #ce {
-        width: 107px;
-        height: 55px;
-        display: block;
-        position: absolute;
-        bottom: 15px;
-        left: 20px;
+        max-width: 100%;
+        background: none;
+        position:absolute;
+        bottom: 0px;
+        padding-top:200%;
       }
 
+    #divbox{
+
+      background: red;
+
+    }
     #logoimg{
       position: absolute;
-      width: 130px;
-      margin-top: -30px;
+      width: 100px;
+      margin-top: -25px;
       max-width: 100%;
-      border-radius: 10px;
     }
 
+    .nav-item .nav-link{
+        font-size: 15px;
+        color: white;
+    }
+
+    .my-4{
+      font-size:25px;
+    }
+    .h2{
+      left: auto;
+      right: auto;
+    }
+
+    /**Dropdown on hover**/
+    .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
+  }
+
+  #navbarDropdownPortfolio:hover{
+    color:red;
+  }
+
+  .dropdown-menu{
+    background:black;
+    border-radius:10px;
+  }
+
+  .dropdown-item{
+    color:grey;
+  }
+  .dropdown-item:hover{
+    color:red;
+    text-decoration:none;
+  }
+
+  div.div1{
+    height:100%;
+    width:100%;
+    position:absolute;
+    left:0px;
+    top:0px;
+  }
+  div.div2{
+      width:100%;
+      position:relative;
+      background:none;
+      margin-top:43%;
+  }
+
+  ::-webkit-scrollbar {
+  -webkit-appearance: none;
+    width: 7px;
+}
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: grey;
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  }
+
+  .card-header{
+    color:black;
+    font-size:18px;
+  }
+
+  .card-text{
+    color:black;
+  }
+
+  #contribute:hover{
+    color:green;
+  }
     </style>
   </head>
   <body>
-
+<header>
         <!-- Navigation -->
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
-          <div class="container">
-            <a class="navbar-brand" href="index.html"></a>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg fixed-top" style="background:black;">
+          <div class="container" style="background:black;">
+            <a class="navbar-brand" href="index.html"><img id="logoimg" src="logo.png"></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon" style="color:white;"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Catestrophe
+              </a>
+              <div  class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownPortfolio">
+                <a class="dropdown-item" href="##"><span id="year1990">Gaja Cyclone</span></a>
+                <a class="dropdown-item" href="##"><span id="year1995">Past 10 Days</span></a>
+                <a class="dropdown-item" href="##"><span id="year2000">Past 30 Days</span></a>
+              </div>
+            </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="services.html">Contributors</a>
+                  <a class="nav-link" href="services.html"><span id="contribute">Contribute</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="works.html">How it works</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="works.html">Login/Register</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="contact.html">Contact Us</a>
@@ -139,28 +208,79 @@
             </div>
           </div>
         </nav>
-
-  <div id="container">
-
-  </div>
-
+</header>
+<!--
   <div id="currentInfo">
     <span id="year1990" class="year"><span id="disaster">Disaster</span></span>
     <span id="year1995" class="year">10 days</span>
     <span id="year2000" class="year">30 days</span>
-
   </div>
-
 
   <div id="title">
     Disaster Sentimental Analysis
   </div>
+-->
 
-  <div class="col-sm-8">
-    Disaster Sentimental Analysis
+<div class="div1">
+  <div id="container" style="position:absolute;">
+
   </div>
+</div>
 
 
+
+<div class="div2">
+      <!-- Page Content -->
+      <div class="container">
+        <h1 class="my-4">Be a part of us</h1>
+
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <div class="card h-100">
+              <h4 class="card-header">For Volunteers</h4>
+              <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="btn btn-primary">Join Us</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="card h-100">
+              <h4 class="card-header">For Donors</h4>
+              <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="btn btn-primary">Register</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="card h-100">
+              <h4 class="card-header">For Educational Institutions</h4>
+              <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="btn btn-primary">Register</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.row -->
+      </div>
+      <br/><br/>
+      <!--Footer-->
+     <!-- Footer -->
+    <footer class="py-3 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Designed & Developed by team <span style="color:red;">Chmod 777</span></p>
+      </div>
+      <!-- /.container -->
+    </footer>
+      <!--/Footer-->
   <script type="text/javascript" src="/globe/third-party/Detector.js"></script>
   <script type="text/javascript" src="/globe/third-party/three.min.js"></script>
   <script type="text/javascript" src="/globe/third-party/Tween.js"></script>
@@ -223,6 +343,10 @@
     }
 
   </script>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
 
