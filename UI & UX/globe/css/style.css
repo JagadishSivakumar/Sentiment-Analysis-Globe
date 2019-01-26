@@ -1,0 +1,115 @@
+    /**Page**/
+      html {
+          height: 100%;
+          max-height: 100%;
+          overflow-x: hidden;
+      }
+
+      body {
+          margin: 0;
+          padding: 0;
+          background:white;
+          color: #ffffff;
+          font-family: sans-serif;
+          font-size: 13px;
+          line-height: 20px;
+      }
+
+        /**Navbar**/
+        /**Dropdown on hover**/
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0; // remove the gap so it doesn't close
+        }
+
+        .nav-item .nav-link {
+                font-size: 15px;
+                color: white;
+            }
+
+        #navbarDropdownPortfolio:hover {
+            color: red;
+        }
+
+        .dropdown-menu {
+            background: black;
+            border-radius: 10px;
+        }
+
+        .dropdown-item {
+            color: grey;
+        }
+
+        .dropdown-item:hover {
+            color: red;
+            text-decoration: none;
+        }
+
+        div.div1 {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        div.div2 {
+            width: 100%;
+            position: relative;
+            background: none;
+            margin-top: 43%;
+        }
+
+        ::-webkit-scrollbar {
+            -webkit-appearance: none;
+            width: 7px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            background-color: grey;
+            -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+        }
+
+        .card-header {
+            color: black;
+            font-size: 18px;
+        }
+
+        .card-text {
+            color: black;
+        }
+
+        #contribute:hover {
+            color: green;
+        }
+
+        /**Logo**/
+        #logoimg {
+            position: absolute;
+            width: 100px;
+            margin-top: -25px;
+            max-width: 100%;
+        }
+
+        .buttonsdiv .btn{
+            margin:3px;
+            margin-left: 8px;
+        }
+
+        .buttonsdiv{
+            background: grey;
+            border-radius:5px;
+        }
+        #recentbutton{
+            font-size: 15px;
+             color: black
+        }
+
+        tr{
+            background: red;
+        }
+
+        td{
+            background:grey;
+        }
