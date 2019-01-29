@@ -32,7 +32,7 @@
         }
 
         .dropdown-menu {
-            background: black;
+            background:#F8F9FA;
             border-radius: 10px;
         }
 
@@ -106,10 +106,60 @@
              color: black
         }
 
+        table{
+            border: 0px solid black;
+        }
+
+        th{
+            color: black;
+        }
         tr{
-            background: red;
+            background:none;
+            border: 0.5px solid #ddd;
         }
 
         td{
-            background:grey;
+            background:white;
+            color: black;
+            
+            
         }
+
+        /**Graph Data**/
+
+        #timeToRender {
+            position: absolute;
+            top: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #d85757;
+            padding: 0px 4px;
+            color: #ffffff;
+        }
+
+        #feedControl {
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 440px;
+
+    
+            .col-sm-4{
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .col-sm-8{
+                max-width: 100%;
+            }
+
+            #tableimg{
+                width: 10px;
+                height: 10px;
+            }
+          
+            #footerdiv{
+                background: grey;
+            }
+
+        

@@ -1,0 +1,445 @@
+<!--DOCTYPE HTML-->
+<html>
+<head>
+<title>
+Most Recent
+</title>
+
+
+
+<!--Data Tables-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css"></style>
+<script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!--CSS ELEMENTS-->
+<link href="css/style.css" rel="stylesheet">
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+
+<style>
+body{
+	background:white;
+
+}
+</style>
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	title: {
+		text: "Most Recent Disaster"
+	},
+	axisX: {
+		valueFormatString: "MMM YYYY"
+	},
+	axisY2: {
+		title: "Destruction Intensity",
+		prefix: " ",
+		suffix: " "
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		verticalAlign: "top",
+		horizontalAlign: "center",
+		dockInsidePlotArea: true,
+		itemclick: toogleDataSeries
+	},
+	data: [{
+		type:"line",
+		axisYType: "secondary",
+		name: "Gaja Cyclone",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "#,###",
+		dataPoints: [		
+			{ x: new Date(2014, 00, 01), y: 850 },
+			{ x: new Date(2014, 01, 01), y: 889 },
+			{ x: new Date(2014, 02, 01), y: 890 },
+			{ x: new Date(2014, 03, 01), y: 899 },
+			{ x: new Date(2014, 04, 01), y: 903 },
+			{ x: new Date(2014, 05, 01), y: 925 },
+			{ x: new Date(2014, 06, 01), y: 899 },
+			{ x: new Date(2014, 07, 01), y: 875 },
+			{ x: new Date(2014, 08, 01), y: 927 },
+			{ x: new Date(2014, 09, 01), y: 949 },
+			{ x: new Date(2014, 10, 01), y: 946 },
+			{ x: new Date(2014, 11, 01), y: 927 },
+			{ x: new Date(2015, 00, 01), y: 950 },
+			{ x: new Date(2015, 01, 01), y: 998 },
+			{ x: new Date(2015, 02, 01), y: 998 },
+			{ x: new Date(2015, 03, 01), y: 1050 },
+			{ x: new Date(2015, 04, 01), y: 1050 },
+			{ x: new Date(2015, 05, 01), y: 999 },
+			{ x: new Date(2015, 06, 01), y: 998 },
+			{ x: new Date(2015, 07, 01), y: 998 },
+			{ x: new Date(2015, 08, 01), y: 1050 },
+			{ x: new Date(2015, 09, 01), y: 1070 },
+			{ x: new Date(2015, 10, 01), y: 1050 },
+			{ x: new Date(2015, 11, 01), y: 1050 },
+			{ x: new Date(2016, 00, 01), y: 995 },
+			{ x: new Date(2016, 01, 01), y: 1090 },
+			{ x: new Date(2016, 02, 01), y: 1100 },
+			{ x: new Date(2016, 03, 01), y: 1150 },
+			{ x: new Date(2016, 04, 01), y: 1150 },
+			{ x: new Date(2016, 05, 01), y: 1150 },
+			{ x: new Date(2016, 06, 01), y: 1100 },
+			{ x: new Date(2016, 07, 01), y: 1100 },
+			{ x: new Date(2016, 08, 01), y: 1150 },
+			{ x: new Date(2016, 09, 01), y: 1170 },
+			{ x: new Date(2016, 10, 01), y: 1150 },
+			{ x: new Date(2016, 11, 01), y: 1150 },
+			{ x: new Date(2017, 00, 01), y: 1150 },
+			{ x: new Date(2017, 01, 01), y: 1200 },
+			{ x: new Date(2017, 02, 01), y: 1200 },
+			{ x: new Date(2017, 03, 01), y: 1200 },
+			{ x: new Date(2017, 04, 01), y: 1190 },
+			{ x: new Date(2017, 05, 01), y: 1170 }
+		]
+	},
+	{
+		type: "line",
+		axisYType: "secondary",
+		name: "Delta Destruction",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "#,###",
+		dataPoints: [
+			{ x: new Date(2014, 00, 01), y: 1200 },
+			{ x: new Date(2014, 01, 01), y: 1200 },
+			{ x: new Date(2014, 02, 01), y: 1190 },
+			{ x: new Date(2014, 03, 01), y: 1180 },
+			{ x: new Date(2014, 04, 01), y: 1250 },
+			{ x: new Date(2014, 05, 01), y: 1270 },
+			{ x: new Date(2014, 06, 01), y: 1300 },
+			{ x: new Date(2014, 07, 01), y: 1300 },
+			{ x: new Date(2014, 08, 01), y: 1358 },
+			{ x: new Date(2014, 09, 01), y: 1410 },
+			{ x: new Date(2014, 10, 01), y: 1480 },
+			{ x: new Date(2014, 11, 01), y: 1500 },
+			{ x: new Date(2015, 00, 01), y: 1500 },
+			{ x: new Date(2015, 01, 01), y: 1550 },
+			{ x: new Date(2015, 02, 01), y: 1550 },
+			{ x: new Date(2015, 03, 01), y: 1590 },
+			{ x: new Date(2015, 04, 01), y: 1600 },
+			{ x: new Date(2015, 05, 01), y: 1590 },
+			{ x: new Date(2015, 06, 01), y: 1590 },
+			{ x: new Date(2015, 07, 01), y: 1620 },
+			{ x: new Date(2015, 08, 01), y: 1670 },
+			{ x: new Date(2015, 09, 01), y: 1720 },
+			{ x: new Date(2015, 10, 01), y: 1750 },
+			{ x: new Date(2015, 11, 01), y: 1820 },
+			{ x: new Date(2016, 00, 01), y: 2000 },
+			{ x: new Date(2016, 01, 01), y: 1920 },
+			{ x: new Date(2016, 02, 01), y: 1750 },
+			{ x: new Date(2016, 03, 01), y: 1850 },
+			{ x: new Date(2016, 04, 01), y: 1750 },
+			{ x: new Date(2016, 05, 01), y: 1730 },
+			{ x: new Date(2016, 06, 01), y: 1700 },
+			{ x: new Date(2016, 07, 01), y: 1730 },
+			{ x: new Date(2016, 08, 01), y: 1720 },
+			{ x: new Date(2016, 09, 01), y: 1740 },
+			{ x: new Date(2016, 10, 01), y: 1750 },
+			{ x: new Date(2016, 11, 01), y: 1750 },
+			{ x: new Date(2017, 00, 01), y: 1750 },
+			{ x: new Date(2017, 01, 01), y: 1770 },
+			{ x: new Date(2017, 02, 01), y: 1750 },
+			{ x: new Date(2017, 03, 01), y: 1750 },
+			{ x: new Date(2017, 04, 01), y: 1730 },
+			{ x: new Date(2017, 05, 01), y: 1730 }
+		]
+	},
+	{
+		type: "line",
+		axisYType: "secondary",
+		name: "Next 10 Days",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "#,###",
+		dataPoints: [
+			{ x: new Date(2014, 00, 01), y: 409 },
+			{ x: new Date(2014, 01, 01), y: 415 },
+			{ x: new Date(2014, 02, 01), y: 419 },
+			{ x: new Date(2014, 03, 01), y: 429 },
+			{ x: new Date(2014, 04, 01), y: 429 },
+			{ x: new Date(2014, 05, 01), y: 450 },
+			{ x: new Date(2014, 06, 01), y: 450 },
+			{ x: new Date(2014, 07, 01), y: 445 },
+			{ x: new Date(2014, 08, 01), y: 450 },
+			{ x: new Date(2014, 09, 01), y: 450 },
+			{ x: new Date(2014, 10, 01), y: 440 },
+			{ x: new Date(2014, 11, 01), y: 429 },
+			{ x: new Date(2015, 00, 01), y: 435 },
+			{ x: new Date(2015, 01, 01), y: 450 },
+			{ x: new Date(2015, 02, 01), y: 475 },
+			{ x: new Date(2015, 03, 01), y: 475 },
+			{ x: new Date(2015, 04, 01), y: 475 },
+			{ x: new Date(2015, 05, 01), y: 489 },
+			{ x: new Date(2015, 06, 01), y: 495 },
+			{ x: new Date(2015, 07, 01), y: 495 },
+			{ x: new Date(2015, 08, 01), y: 500 },
+			{ x: new Date(2015, 09, 01), y: 508 },
+			{ x: new Date(2015, 10, 01), y: 520 },
+			{ x: new Date(2015, 11, 01), y: 525 },
+			{ x: new Date(2016, 00, 01), y: 525 },
+			{ x: new Date(2016, 01, 01), y: 529 },
+			{ x: new Date(2016, 02, 01), y: 549 },
+			{ x: new Date(2016, 03, 01), y: 550 },
+			{ x: new Date(2016, 04, 01), y: 568 },
+			{ x: new Date(2016, 05, 01), y: 575 },
+			{ x: new Date(2016, 06, 01), y: 579 },
+			{ x: new Date(2016, 07, 01), y: 575 },
+			{ x: new Date(2016, 08, 01), y: 585 },
+			{ x: new Date(2016, 09, 01), y: 589 },
+			{ x: new Date(2016, 10, 01), y: 595 },
+			{ x: new Date(2016, 11, 01), y: 595 },
+			{ x: new Date(2017, 00, 01), y: 595 },
+			{ x: new Date(2017, 01, 01), y: 600 },
+			{ x: new Date(2017, 02, 01), y: 624 },
+			{ x: new Date(2017, 03, 01), y: 635 },
+			{ x: new Date(2017, 04, 01), y: 650 },
+			{ x: new Date(2017, 05, 01), y: 675 }
+		]
+	},
+	{
+		type: "line",
+		axisYType: "secondary",
+		name: "Next 30 Days",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "#,###",
+		dataPoints: [
+			{ x: new Date(2014, 00, 01), y: 529 },
+			{ x: new Date(2014, 01, 01), y: 540 },
+			{ x: new Date(2014, 02, 01), y: 539 },
+			{ x: new Date(2014, 03, 01), y: 565 },
+			{ x: new Date(2014, 04, 01), y: 575 },
+			{ x: new Date(2014, 05, 01), y: 579 },
+			{ x: new Date(2014, 06, 01), y: 589 },
+			{ x: new Date(2014, 07, 01), y: 579 },
+			{ x: new Date(2014, 08, 01), y: 579 },
+			{ x: new Date(2014, 09, 01), y: 579 },
+			{ x: new Date(2014, 10, 01), y: 569 },
+			{ x: new Date(2014, 11, 01), y: 525 },
+			{ x: new Date(2015, 00, 01), y: 535 },
+			{ x: new Date(2015, 01, 01), y: 575 },
+			{ x: new Date(2015, 02, 01), y: 599 },
+			{ x: new Date(2015, 03, 01), y: 619 },
+			{ x: new Date(2015, 04, 01), y: 639 },
+			{ x: new Date(2015, 05, 01), y: 648 },
+			{ x: new Date(2015, 06, 01), y: 640 },
+			{ x: new Date(2015, 07, 01), y: 645 },
+			{ x: new Date(2015, 08, 01), y: 648 },
+			{ x: new Date(2015, 09, 01), y: 649 },
+			{ x: new Date(2015, 10, 01), y: 649 },
+			{ x: new Date(2015, 11, 01), y: 649 },
+			{ x: new Date(2016, 00, 01), y: 650 },
+			{ x: new Date(2016, 01, 01), y: 665 },
+			{ x: new Date(2016, 02, 01), y: 675 },
+			{ x: new Date(2016, 03, 01), y: 695 },
+			{ x: new Date(2016, 04, 01), y: 690 },
+			{ x: new Date(2016, 05, 01), y: 699 },
+			{ x: new Date(2016, 06, 01), y: 699 },
+			{ x: new Date(2016, 07, 01), y: 699 },
+			{ x: new Date(2016, 08, 01), y: 699 },
+			{ x: new Date(2016, 09, 01), y: 699 },
+			{ x: new Date(2016, 10, 01), y: 709 },
+			{ x: new Date(2016, 11, 01), y: 699 },
+			{ x: new Date(2017, 00, 01), y: 700 },
+			{ x: new Date(2017, 01, 01), y: 700 },
+			{ x: new Date(2017, 02, 01), y: 724 },
+			{ x: new Date(2017, 03, 01), y: 739 },
+			{ x: new Date(2017, 04, 01), y: 749 },
+			{ x: new Date(2017, 05, 01), y: 740 }
+		]
+	}]
+});
+chart.render();
+
+function toogleDataSeries(e){
+	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+		e.dataSeries.visible = false;
+	} else{
+		e.dataSeries.visible = true;
+	}
+	chart.render();
+}
+
+}
+</script>
+
+</head>
+
+<style>
+body{
+    background:black;
+}
+</style>
+
+<header>
+<!--Navigation-->
+ <!-- Navigation -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg fixed-top" style="background:black;width:100%;">
+          <div class="container" style="background:black;">
+            <a class="navbar-brand" href="index.html"><img id="logoimg" src="logo.png"></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Catestrophe
+              </a>
+              <div  class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownPortfolio">
+                <a class="dropdown-item" href="internal.html"><span id="year1990">Most Recent</span></a>
+                <a class="dropdown-item" href="##"><span id="year1995">Past 10 Days</span></a>
+                <a class="dropdown-item" href="##"><span id="year2000">Past 30 Days</span></a>
+              </div>
+            </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="services.html"><span id="contribute">Contribute</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="works.html">How it works</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="works.html">Login/Register</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+</header>
+
+
+<body>
+<!--Graph and Sentiment Section-->
+<div class="container">
+<div class="col-lg-12">
+<br/><br/>
+<div class="row" style="margin-top:5%;margin-left:3%;">
+    <div class="col-sm-3" style="border-radius:10px;margin-right:10px;max-width:100%;">
+        <span id="recentbutton">Recent Sentiment : </span><button type="button" class="btn btn-danger">Danger</button>
+
+            <div class="buttonsdiv" style="max-width=100%;float:left;margin-top:8px;">
+                <button type="button" class="btn btn-info">Gaja</button>
+                <button type="button" class="btn btn-info">Delta Distruction</button>
+                <button type="button" class="btn btn-warning">Warnings</button>
+                <button type="button" class="btn btn-info">Weather Predictions</button>
+            </div>
+    </div>
+    <div class="col-sm-8" style="border-radius:10px;max-width:100%;">
+        <div id="chartContainer" style="height: 300px; width: 100%;max-height:100%;"></div>
+    </div>
+</div>
+</div>
+
+<!--Data Tables-->
+<div class="container" style="margin-top:5%;">
+<div class="row header" style="text-align:center;color:green">
+</div>
+<table id="myTable" class="table table-striped" >  
+        <thead>  
+          <tr>  
+            <th>ENO</th>  
+            <th>EMPName</th>  
+            <th>Country</th>  
+            <th>Salary</th>  
+          </tr>  
+        </thead>  
+        <tbody>  
+          <tr>  
+            <td>001</td>  
+            <td>Anusha</td>  
+            <td>India</td>  
+            <td>10000</td>  
+          </tr>  
+          <tr>  
+            <td>002</td>  
+            <td>Charles</td>  
+            <td>United Kingdom</td>  
+            <td>28000</td>  
+          </tr>  
+          <tr>  
+            <td>003</td>  
+            <td>Sravani</td>  
+            <td>Australia</td>  
+            <td>7000</td>  
+          </tr>  
+		   <tr>  
+            <td>004</td>  
+            <td>Amar</td>  
+            <td>India</td>  
+            <td>18000</td>  
+          </tr>  
+          <tr>  
+            <td>005</td>  
+            <td>Lakshmi</td>  
+            <td>India</td>  
+            <td>12000</td>  
+          </tr>  
+          <tr>  
+            <td>006</td>  
+            <td>James</td>  
+            <td>Canada</td>  
+            <td>50000</td>  
+          </tr>  
+		  
+		   <tr>  
+            <td>007</td>  
+            <td>Ronald</td>  
+            <td>US</td>  
+            <td>75000</td>  
+          </tr>  
+          <tr>  
+            <td>008</td>  
+            <td>Mike</td>  
+            <td>Belgium</td>  
+            <td>100000</td>  
+          </tr>  
+          <tr>  
+            <td>009</td>  
+            <td>Andrew</td>  
+            <td>Argentina</td>  
+            <td>45000</td>  
+          </tr>  
+		  
+		    <tr>  
+            <td>010</td>  
+            <td>Stephen</td>  
+            <td>Austria</td>  
+            <td>30000</td>  
+          </tr>  
+          <tr>  
+            <td>011</td>  
+            <td>Sara</td>  
+            <td>China</td>  
+            <td>750000</td>  
+          </tr>  
+          <tr>  
+            <td>012</td>  
+            <td>JonRoot</td>  
+            <td>Argentina</td>  
+            <td>65000</td>  
+          </tr>  
+        </tbody>  
+      </table>  
+	  </div>
+
+</div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('#myTable').dataTable();
+});
+</script>
+</body>
+</html>
