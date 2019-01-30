@@ -23,6 +23,10 @@ Series => Each Strip on Globe
 ## Cyclone.csv 
 [ ID, convId, date , time , user id, user_name , user full name , tweet, pic, pic link, retweet count,likes,hashtag,quotes,...]
 
+## cleaned_data.csv
+[S.no,tweet]
+Contains the tweets of cyclone.csv in cleaned manner by removing links, hashtags, Tags and emojis
+
 ## only_tweets.csv
 [Sno,tweet]
           *the tweets can be in regional language*
