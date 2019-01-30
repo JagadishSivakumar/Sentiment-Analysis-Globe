@@ -47,6 +47,6 @@ Contains the tweets of cyclone.csv in cleaned manner by removing links, hashtags
 
 ### ETCL.ipynb
 Performs translation and cleaning process of removing links, hashtags, tags and emojis and store only the cleaned tweets in another file.
-Input File is *cyclone.csv*
+Input File is *cyclone.csv*.   
 Output File is *cleaned_data.csv*
 
