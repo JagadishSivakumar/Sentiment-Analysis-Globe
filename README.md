@@ -31,17 +31,13 @@ Series => Each Strip on Globe
 [ ID, convId, date , time , user id, user_name , user full name , tweet, pic, pic link, retweet count,likes,hashtag,quotes,...]
 
 ### cleaned_data.csv
-[S.no,tweet]
+[S.no,tweet]   
 Contains the tweets of cyclone.csv in cleaned manner by removing links, hashtags, Tags and emojis
 
-### only_tweets.csv
-[Sno,tweet]
-          *the tweets can be in regional language*
-          
 ### Translated.csv          
-[Sno,tweet]
-           *tweets are only in english*
-           *the entire set of tweets are present in a single dataframe*
+[Sno,tweet]   
+*tweets are only in english*   
+*the entire set of tweets are present in a single dataframe*
 
 ## Notebook Files
 
