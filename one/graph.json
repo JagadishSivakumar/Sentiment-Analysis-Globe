@@ -1,5 +1,4 @@
-			<script>
-					new Chart(document.getElementById("line-chart"), {
+ {
   type: 'line',
   data: {
     labels: [14,15,16,17,18,19,20,21,22,23,24],
@@ -32,4 +31,4 @@
       text: 'Contributions through Lexicon'
     }
   }
-});
+}
