@@ -10,11 +10,88 @@
           padding: 0;
           background:white;
           color: #ffffff;
-          font-family: sans-serif;
+          font-family: verdana,
+          arial,
+          sans-serif";
+          font-size: 22px;
           font-size: 13px;
           line-height: 20px;
       }
 
+        .active{
+            color:red;
+        }
+        
+        td> .btn{
+            width: 80px;
+        }
+
+        td> .btn-success{
+            width: 100px;
+        }
+        /**Tags**/
+        #labelstag{
+            background:#F8F9FA;
+            border-radius:5px;
+            margin-right:10px;
+        }
+
+        @media only screen and (max-width:800px){
+            .mapouter{
+                margin-right: 10%;
+                width: 300px;
+                max-width: 100%;
+                float: left;
+                padding-top: 15px;
+            }
+        }
+        #closeButton{
+            background:none;
+            height: 0%;
+            margin-left:3px;
+            color: #d85757;
+        }
+
+        #closeButton2{
+            background: none;
+            height: 0%;
+            margin-left: 3px;
+            color: #d85757;
+        }
+
+        #closeButton3{
+            background: none;
+            height: 0%;
+            margin-left: 3px;
+            color: #d85757;
+        }
+
+        #closeButton4
+        {
+            background: none;
+            height: 0%;
+            margin-left: 3px;
+            color: #d85757;
+        }
+
+        #question{
+            color: black;
+            margin: auto;
+        }
+
+        #content {
+            padding-top:3%;
+            
+            max-width: 80%;
+            margin: 0 auto;
+            color: black;
+            text-align:justify;
+            font-size:15px;
+        }
+
+        #howworks:hover{
+            color:#81bcef;
+        }
         /**Navbar**/
         /**Dropdown on hover**/
         .dropdown:hover .dropdown-menu {
@@ -121,10 +198,87 @@
         td{
             background:white;
             color: black;
-            
-            
+            height: 50px;
+
         }
 
+        /**Modal Box**/
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        #modaltxt{
+            color: #000;
+            font-size:18px;
+        }
+        
+        #modalp{
+            color:#000;
+            font-size:18px;
+        }
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 71%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        input{
+            margin-top:-10px;
+        }
+        #formtxt{
+            color: black;
+        }
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #intensityhigh{
+            font-size:20px;
+            color:red;
+        }
+
+        #intensitymedium{
+            font-size:20px;
+            color: #81bcef;
+        }
+
+        #intensityless{
+            font-size:20px;
+            color:#aaaaaa;
+        }
         /**Graph Data**/
 
         #timeToRender {

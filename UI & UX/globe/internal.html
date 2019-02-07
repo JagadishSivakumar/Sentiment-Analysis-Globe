@@ -20,7 +20,12 @@
 				<!--Aos JS-->
 				<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+				<!--Chart JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
+				<!--Icons-->
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+				
 
 		<style type="text/css">
 				@import url("http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.css");
@@ -35,60 +40,19 @@
 				}
 				</style>
 
-		<script>
-window.onload = function () {
-
-var limit = 50000;
-var y = 100;    
-var data = [];
-var dataSeries = { type: "line" };
-var dataPoints = [];
-for (var i = 0; i < limit; i += 1) {
-	y += Math.round(Math.random() * 10 - 5);
-	dataPoints.push({
-		x: i,
-		y: y
-	});
-}
-dataSeries.dataPoints = dataPoints;
-data.push(dataSeries);
-
-//Better to construct options first and then pass it as a parameter
-var options = {
-	zoomEnabled: true,
-	animationEnabled: true,
-	title: {
-		text: "Gaja Cyclone Intensity Analysis"
-	},
-	axisY: {
-		includeZero: false,
-		lineThickness: 1
-	},
-	data: data  // random data
-};
-
-//font style script
-var chart = new CanvasJS.Chart("chartContainer", options);
-var startTime = new Date();
-chart.render();
-var endTime = new Date();
-document.getElementById("timeToRender").innerHTML = "Time to Render: " + (endTime - startTime) + "ms";
-
-}
-</script>
 
 	</head>
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container">
-            <a class="navbar-brand" href="index.html"><img id="logoimg" src="logo.svg"></a>
+            <a class="navbar-brand" href="index.html"><img id="logoimg" src="logoblack.png"></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Catestrophe
               </a>
               <div  class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownPortfolio">
@@ -101,10 +65,10 @@ document.getElementById("timeToRender").innerHTML = "Time to Render: " + (endTim
                   <a class="nav-link" href="index.html#contributesec"><span id="contribute">Contribute</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="works.html">How it works</a>
+                    <a class="nav-link" href="works.html"><span id="howworks">How it works</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="works.html">Login/Register</a>
+                    <a class="nav-link" href="login.html">Login/Register</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="contact.html">Contact Us</a>
@@ -119,38 +83,52 @@ document.getElementById("timeToRender").innerHTML = "Time to Render: " + (endTim
 </script>
 
 	<div class="container" style="margin-top:3%;">
+	<div class="col-sm-12">
 			<div class="row">
-		
-					<div class="col-sm-4" style="border-radius:8px;margin-right:10px;">
+				<div class="col-sm-5" style="border-radius:8px;">
 					<br/>
-					<div data-aos="fade-right">
+					<div data-aos="zoom-in">
 						<span id="recenttxt" style="font-size:15px;color:black;">Recent Sentiment : </span><button type="button" class="btn btn-danger" style="margin:3px;max-width:100%;">Danger</button>
 						<button type="button" class="btn btn-primary" style="margin:3px;max-width:100%;">Government</button>
-						<button type="button" class="btn btn-success" style="margin:3px;max-width:100%;">Contributors details</button>
+						<button type="button" class="btn btn-success" style="margin:3px;max-width:100%;"><a href="internal.html#EmergencyReliefGrid" style="color:white;text-decoration:none;">Make Contributions</a></button>
 						<button type="button" class="btn btn-info" style="margin:3px;max-width:100%;">Weather forecast</button>
-					</div>
-		</div>
-					<div class="col-sm-3" style="background:#eaeef2;border-radius:8px;">
-							<div id="body">
-							<div id="feedControl">Loading...</div>
-							</div>
-					</div>
-<div data-aos="fade-left">
-					<div class="col-sm-4">
-						<iframe src="https://twitter.com/hashtag/cyclonegaja?lang=en">
-							<p>Your browser does not support iframes.</p>
-						</iframe>
-					</div>
+						<br/><br/>
+					
+					<span id="recenttxt" style="font-size:15px;color:black;">Word Cloud </span>
+						<img src="wordcloud.png" style="margin-left:-8%;max-width:100%;">
+
 				</div>
-
-					<div class="col-sm-12" style="margin-top:3%;">
-							<div id="chartContainer" style="height: 300px; width: 100%;max-height:100%;">
-							</div>
-					</div>
+				</div>
+				<div class="col-lg-7">
+				<div class="mapouter" style="float:left;"><div class="gmap_canvas"><iframe width="600" max-width="100%" height="500" max-height="100%" margin-top="30px" id="gmap_canvas" src="https://google.org/crisismap/google.com/2018-gaja?hl=en&llbox=32.48%2C-3.24%2C123.43%2C39.06&t=ROADMAP&layers=1&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
+				</div>
+				</div>
+			</div>
 		</div>
-	</div>
-
-
+		</div>
+		<div class="container">
+					<div class="col-sm-12" style="margin-top:30px;">
+						<canvas id="line-chart" max-width="100%" height="100%"></canvas>
+						<script>
+								var requestLoop = setInterval(function(){
+								request({
+										url: "https://raw.githubusercontent.com/JagadishSivakumar/Sentiment-Analysis-Globe/master/one/graph.json?token=AfAq58Up4L4eNIKRMA67IzEZYXNfScGYks5cU-NawA%3D%3D",
+										method: "GET",
+										timeout: 10000,
+										followRedirect: true,
+										maxRedirects: 10
+								},function(error, response, body){
+										if(!error && response.statusCode == 200){
+												console.log('sucess!');
+										}else{
+												console.log('error' + response.statusCode);
+										}
+								});
+							}, 60000);
+						</script>
+				</div>
+			</div>
+		</div>
 	<!--Data Table-->
 <style>
 #tableimg{
@@ -160,7 +138,7 @@ document.getElementById("timeToRender").innerHTML = "Time to Render: " + (endTim
             }
 </style>
 <!--Data Tables-->
-<div class="container" style="margin-top:5%;">
+<div class="container" style="margin-top:6%;">
 <div class="row header" style="text-align:center;color:green">
 </div>
 <table id="myTable" class="table table-striped" >  
@@ -169,123 +147,304 @@ document.getElementById("timeToRender").innerHTML = "Time to Render: " + (endTim
 				<!--Top Label-->
           <tr>  
             <th> </th>  
-            <th>Organization</th>  
             <th>Location</th>  
-            <th>Contact</th>  
-						<th>Contribute</th> 
+						<th>Requirements</th>
+						<th>Intensity</th> 
 						<th>Emergency</th> 
+						<th>Make Contributions</th>
+						<th>Recovery Prediction</th>
           </tr>  
 
 					<!--/Top Label-->
         </thead>  
         <tbody>  
-          <tr>  
-            <td><img id="tableimg" src="dummy.jpg"></td>  
-            <td>Anusha</td>  
-            <td>Agaram Foundations</td>  
-            <td>9790778532</td>  
-						<td><button type="button" class="btn btn-success" style="max-width:100%;">Contribute</button></td>
-						<td><a href="tel:9790000031">9790000031</a></td>  
-          </tr>  
-          <tr>  
+				 <tr>  
 	     			<td><img id="tableimg" src="dummy.jpg"></td>
-            <td>Charles</td>  
-            <td>Behindwoods</td>  
-            <td>9444533363</td>  
-						<td><button type="button" class="btn btn-success" style="max-width:100%;">Contribute</button></td>
-						<td><a href="tel:9790000031">9790000031</a></td>
-          </tr>  
-          <tr>  
-	     			<td><img id="tableimg" src="dummy.jpg"></td>
-            <td>Sravani</td>  
-            <td>Australia</td>  
-            <td>7000</td>  
-						<td><button type="button" class="btn btn-success" style="max-width:100%;">Contribute</button></td>
-						<td><a href="tel:9790000031">9790000031</a></td>
-          </tr>  
-		   <tr>  
-	     			<td><img id="tableimg" src="dummy.jpg"></td>
-            <td>Amar</td>  
-            <td>India</td>  
-            <td>18000</td> 
-						<td><button type="button" class="btn btn-success" style="max-width:100%;">Contribute</button></td> 
-						<td><a href="tel:9790000031">9790000031</a></td>
-          </tr>  
-          <tr>  
-	     			<td><img id="tableimg" src="dummy.jpg"></td>
-            <td>Lakshmi</td>  
-            <td>India</td>  
-            <td>12000</td>
-						<td><button type="button" class="btn btn-success" style="max-width:100%;">Contribute</button></td> 
-						<td><a href="tel:9790000031">9790000031</a></td> 
-          </tr>  
-          <tr>  
-	     			<td><img id="tableimg" src="dummy.jpg"></td>
-            <td>James</td>  
-            <td>Canada</td>  
-            <td>50000</td>  
-						<td><button type="button" class="btn btn-success" style="max-width:100%;">Contribute</button></td>
-						<td><a href="tel:9790000031">9790000031</a></td>
-          </tr>  
-		  
-		   <tr>  
-	     			<td><img id="tableimg" src="dummy.jpg"></td>
-            <td>Ronald</td>  
-            <td>US</td>  
-            <td>75000</td> 
-						<td><button type="button" class="btn btn-success" style="max-width:100%;">Contribute</button></td> 
-						<td><a href="tel:9790000031">9790000031</a></td>
-          </tr>  
-          <tr>  
-	     			<td><img id="tableimg" src="dummy.jpg"></td>
-            <td>Mike</td>  
-            <td>Belgium</td>  
-            <td>100000</td>
-						<td><button type="button" class="btn btn-success" style="max-width:100%;">Contribute</button></td>
-						<td><a href="tel:9790000031">9790000031</a></td>
-          </tr>  
-          <tr>  
-	     			<td><img id="tableimg" src="dummy.jpg"></td>
-            <td>Andrew</td>  
-            <td>Argentina</td>  
-            <td>45000</td> 
-						<td><button type="button" class="btn btn-success" style="max-width:100%;">Contribute</button></td> 
-						<td><a href="tel:9790000031">9790000031</a></td>
-          </tr>  
-		  
-		    <tr>  
-	     			<td><img id="tableimg" src="dummy.jpg"></td>
-            <td>Stephen</td>  
-            <td>Austria</td>  
-            <td>30000</td> 
-						<td><button type="button" class="btn btn-success" style="max-width:100%;">Contribute</button></td> 
-						<td><a href="tel:9790000031">9790000031</a></td>
-          </tr>  
-          
-					<tr>  
-	     			<td><img id="tableimg" src="dummy.jpg"></td>
-            <td>Stepnie</td>  
-            <td>Austria</td>  
-            <td>30000</td> 
-						<td><button type="button" class="btn btn-success" style="max-width:100%;">Contribute</button></td> 
-						<td><a href="tel:9790000031">9790000031</a></td>
-          </tr>  
-					
-					<tr>  
-	     			<td><img id="tableimg" src="dummy.jpg"></td>
-            <td>Stephen</td>  
-            <td>Austrias</td>  
-            <td>30000</td> 
-						<td><button type="button" class="btn btn-success" style="max-width:100%;">Contribute</button></td> 
-						<td><a href="tel:9790000031">9790000031</a></td>
+            <td>Nagapattinam</td>  
+						<td>
+						<a id="labelstag" rel="tag"> food <span id="closeButton">x</span></a>
+						<a id="labelstag" rel="tag"> shelter <span id="closeButton2">x</span></a><br/><br/>
+						<a id="labelstag" rel="tag"> clothes <span id="closeButton3">x</span></a>
+						<a id="labelstag" rel="tag"> Health <span id="closeButton4">x</span></a>
+						</td> 
+						<td><button type="button" class="btn btn-danger" style="max-width:100%;">High</button></td> 
+						<td><a href="tel:1077">1077</a></td>
+						<td><button type="button" class="btn btn-success"><span id="myBtn">Contribute</span></button></td>
+						<td>175</td>
           </tr>  
 
+          <tr>  
+            <td><img id="tableimg" src="dummy.jpg"></td>  
+            <td>Cuddalore</td>  
+						<td>
+						<a id="labelstag" rel="tag"> food <span id="closeButton">x</span></a>
+						<a id="labelstag" rel="tag"> shelter <span id="closeButton">x</span></a><br/><br/>
+						</td>
+						<td><button type="button" class="btn btn-warning" style="max-width:100%;">Medium</button></td> 
+						<td><a href="tel:9790000031">9790000031</a></td>
+						<td><button type="button" class="btn btn-success"><span>Contribute</span></button></td>
+						<td>100</td>
+          </tr>
+
+          <tr>  
+	     			<td><img id="tableimg" src="dummy.jpg"></td>
+            <td>Karaikal</td>  
+						<td>
+						<a id="labelstag" rel="tag"> food <span id="closeButton">x</span></a>
+						<a id="labelstag" rel="tag"> shelter <span id="closeButton">x</span></a><br/><br/>
+						</td>
+						<td><button type="button" class="btn btn-info" style="max-width:100%;">Less</button></td> 
+						<td><a href="tel:04368">04368-227704</a></td>
+						<td><button type="button" class="btn btn-success"><span>Contribute</span></button></td>
+						<td>80</td>
+          </tr>  
+		   <tr>  
+	     			<td><img id="tableimg" src="dummy.jpg"></td>
+            <td>Tiruvarur</td>  
+						<td>
+						<a id="labelstag" rel="tag"> food <span id="closeButton">x</span></a>
+						<a id="labelstag" rel="tag"> shelter <span id="closeButton">x</span></a><br/><br/>
+						<a id="labelstag" rel="tag"> clothes <span id="closeButton">x</span></a>
+						<a id="labelstag" rel="tag"> Health <span id="closeButton">x</span></a>
+						</td>
+						<td><button type="button" class="btn btn-danger" style="max-width:100%;">High</button></td> 
+						<td><a href="tel:979000">8778984875</a></td>
+						<td><button type="button" class="btn btn-success"><span>Contribute</span></button></td>
+						<td>30</td>
+          </tr>  
+          <tr>  
+	     			<td><img id="tableimg" src="dummy.jpg"></td>
+            <td>Tanjavur</td>  
+						<td>
+						<a id="labelstag" rel="tag"> food <span id="closeButton">x</span></a>
+						</td>
+						<td><button type="button" class="btn btn-danger" style="max-width:100%;">High</button></td> 
+						<td><a href="tel:9790000031">+914362230102</a></td>
+						<td><button type="button" class="btn btn-success"><span>Contribute</span></button></td>
+						<td>62</td> 
+          </tr>  
+          <tr>  
+	     			<td><img id="tableimg" src="dummy.jpg"></td>
+            <td>Pudhukottai</td>  
+						<td>
+						<a id="labelstag" rel="tag"> shelter <span id="closeButton">x</span></a>
+						<a id="labelstag" rel="tag"> clothes <span id="closeButton">x</span></a>
+						</td>
+						<td><button type="button" class="btn btn-warning" style="max-width:100%;">Medium</button></td> 
+						<td><a href="tel:9790000031">+914322221624</a></td>
+						<td><button type="button" class="btn btn-success"><span>Contribute</span></button></td>
+						<td>48</td>
+          </tr>  
+		  
+		   <tr>  
+	     			<td><img id="tableimg" src="dummy.jpg"></td>
+            <td>Tuticorin</td>  
+						<td>
+						<a id="labelstag" rel="tag"> food <span id="closeButton">x</span></a>
+						<a id="labelstag" rel="tag"> shelter <span id="closeButton">x</span></a><br/><br/>
+						<a id="labelstag" rel="tag"> clothes <span id="closeButton">x</span></a>
+						</td>
+						<td><button type="button" class="btn btn-info" style="max-width:100%;">Less</button></td> 
+						<td><a href="tel:9790000031">+914612340600</a></td>
+						<td><button type="button" class="btn btn-success"><span>Contribute</span></button></td>
+						<td>18</td>
+          </tr>  
+          <tr>  
+	     			<td><img id="tableimg" src="dummy.jpg"></td>
+            <td>Ramanathapuram</td>  
+						<td>
+						<a id="labelstag" rel="tag"> food <span id="closeButton">x</span></a>
+						<a id="labelstag" rel="tag"> shelter <span id="closeButton">x</span></a><br/><br/>
+						<a id="labelstag" rel="tag"> clothes <span id="closeButton">x</span></a>
+						</td>
+						<td><button type="button" class="btn btn-info" style="max-width:100%;">Less</button></td> 
+						<td><a href="tel:9790000031">+9114567231220</a></td>
+						<td><button type="button" class="btn btn-success"><span>Contribute</span></button></td>
+						<td>8</td>
+          </tr>  
+          <tr>  
+	     			<td><img id="tableimg" src="dummy.jpg"></td>
+            <td>Kodaikanal</td>  
+						<td>
+						<a id="labelstag" rel="tag"> food <span id="closeButton">x</span></a>
+						<a id="labelstag" rel="tag"> shelter <span id="closeButton">x</span></a><br/><br/>
+						<a id="labelstag" rel="tag"> clothes <span id="closeButton">x</span></a>
+						</td>
+						<td><button type="button" class="btn btn-info" style="max-width:100%;">Less</button></td> 
+						<td><a href="tel:9790000031">9876234156</a></td>
+						<td><button type="button" class="btn btn-success"><span>Contribute</span></button></td>
+						<td>21</td>
+          </tr>  
         </tbody>  
       </table>  
 	  </div>
 
 </div>
 <br/><br/>
+
+<!--Modal Box-->
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+		<br/>
+    <p id="modaltxt"><b>Make Contribution</b></p>
+		<p id="modalp">Select the organization you want to contribute through</p>
+		<br/>
+		<p id="modalp"><b>Organization :</b></p>
+		<select style="max-width:100%">
+			<option value="orga">BHARATH INSTITUTE OF HIGHER EDUCATION AND RESEARCH</option>
+			<option value="orgb">Bharath Environment Seva Team</option>
+			<option value="orgc">BHARATH ZION FOUNDATION</option>
+			<option value="orgd">BHARATHA TAMIL THAI HELPING HANDS TRUST</option>
+			<option value="orge">Bharathamatha Family Welfare Foundation</option>
+			<option value="orgf">Bharathiya Jeevan Dhara Environment and Renaissance Society (BJDERS)</option>
+		</select>
+	<br/><br/>
+		<div class="col-xs-12">
+                    <div class="hedText offsetb20 dnone"><div class="pull-left">I want to rush my help towards drought.</div></div>
+                    <div id="EmergencyReliefGrid" class="table-responsive">
+                        <div>
+		<table cellspacing="5" cellpadding="5" id="ContentPlaceHolder1_GVWAmount" style="width:100%;">
+			<tbody><tr style="color:White;background-color:#358597;font-weight:bold;">
+				<th class="dnone wid5per" scope="col" style="color:white;">Select</th><th class="ItemWidper wid50per" scope="col" style="color:white;">Item Name</th><th class="ta-right" scope="col" style="color:white;">Value (Rs.)</th><th class="wid15per ta-right" scope="col" style="color:white;">Quantity</th><th class="Amntwidper ta-right wid15per" scope="col" style="color:white;">Amount (Rs.)</th>
+			</tr><tr>
+				<td class="dnone">
+                                        <span class="CheckboxSize"><input id="ContentPlaceHolder1_GVWAmount_ChkSelect_0" type="checkbox" name="ctl00$ContentPlaceHolder1$GVWAmount$ctl02$ChkSelect" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$GVWAmount$ctl02$ChkSelect\',\'\')', 0)"></span>
+                                    </td><td>
+                                        <span id="ContentPlaceHolder1_GVWAmount_LblDescription_0"><span style="color:#816cef;">Food Items for a family:</span> Rice, lentil, cooking oil, iodized salt, biscuits, drinking water</span><p></p>
+                                    </td><td class="ta-right">
+                                        <span id="ContentPlaceHolder1_GVWAmount_LblAmount_0" class="orange">600</span>
+                                    </td><td class="ta-right">
+                                        
+                                        <select name="ctl00$ContentPlaceHolder1$GVWAmount$ctl02$Ddl_Quantity" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$GVWAmount$ctl02$Ddl_Quantity\',\'\')', 0)" id="ContentPlaceHolder1_GVWAmount_Ddl_Quantity_0" class="">
+					<option selected="selected" value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+
+				</select>
+                                    </td><td class="ta-right">
+                                        <span id="ContentPlaceHolder1_GVWAmount_LblSumAmount_0" class="orange">0</span>
+                                    </td>
+			</tr><tr>
+				<td class="dnone">
+                                        <span class="CheckboxSize"><input id="ContentPlaceHolder1_GVWAmount_ChkSelect_1" type="checkbox" name="ctl00$ContentPlaceHolder1$GVWAmount$ctl03$ChkSelect" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$GVWAmount$ctl03$ChkSelect\',\'\')', 0)"></span>
+                                    </td><td>
+                                        <span id="ContentPlaceHolder1_GVWAmount_LblDescription_1"><span style="color:#816cef;">Non-Food Items for a family: </span>Candles, Mosquito coils, Flooring mat, lungi for men, saree for women, towels, blankets, sanitary pads </span><p></p>
+                                    </td><td class="ta-right">
+                                        <span id="ContentPlaceHolder1_GVWAmount_LblAmount_1" class="orange">1100</span>
+                                    </td><td class="ta-right">
+                                        
+                                        <select name="ctl00$ContentPlaceHolder1$GVWAmount$ctl03$Ddl_Quantity" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$GVWAmount$ctl03$Ddl_Quantity\',\'\')', 0)" id="ContentPlaceHolder1_GVWAmount_Ddl_Quantity_1" class="">
+					<option selected="selected" value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+
+				</select>
+                                    </td><td class="ta-right">
+                                        <span id="ContentPlaceHolder1_GVWAmount_LblSumAmount_1" class="orange">0</span>
+                                    </td>
+			</tr><tr>
+				<td class="dnone">
+                                        <span class="CheckboxSize"><input id="ContentPlaceHolder1_GVWAmount_ChkSelect_2" type="checkbox" name="ctl00$ContentPlaceHolder1$GVWAmount$ctl04$ChkSelect" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$GVWAmount$ctl04$ChkSelect\',\'\')', 0)"></span>
+                                    </td><td>
+                                        <span id="ContentPlaceHolder1_GVWAmount_LblDescription_2"><span style="color:#816cef;">Temporary shelter for a family: </span> Tarpaulin, rope</span><p></p>
+                                    </td><td class="ta-right">
+                                        <span id="ContentPlaceHolder1_GVWAmount_LblAmount_2" class="orange">1150</span>
+                                    </td><td class="ta-right">
+                                        
+                                        <select name="ctl00$ContentPlaceHolder1$GVWAmount$ctl04$Ddl_Quantity" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$GVWAmount$ctl04$Ddl_Quantity\',\'\')', 0)" id="ContentPlaceHolder1_GVWAmount_Ddl_Quantity_2" class="">
+					<option selected="selected" value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+
+				</select>
+                                    </td><td class="ta-right">
+                                        <span id="ContentPlaceHolder1_GVWAmount_LblSumAmount_2" class="orange">0</span>
+                                    </td>
+			</tr><tr>
+				<td class="dnone">
+                                        <span class="CheckboxSize"><input id="ContentPlaceHolder1_GVWAmount_ChkSelect_3" type="checkbox" name="ctl00$ContentPlaceHolder1$GVWAmount$ctl05$ChkSelect" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$GVWAmount$ctl05$ChkSelect\',\'\')', 0)"></span>
+                                    </td><td>
+                                        <span id="ContentPlaceHolder1_GVWAmount_LblDescription_3"><span style="color:#816cef;">Emergency Kit:</span> Food items, non-food items and temporary shelter for two families</span><p></p>
+                                    </td><td class="ta-right">
+                                        <span id="ContentPlaceHolder1_GVWAmount_LblAmount_3" class="orange">5500</span>
+                                    </td><td class="ta-right">
+                                        
+                                        <select name="ctl00$ContentPlaceHolder1$GVWAmount$ctl05$Ddl_Quantity" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$GVWAmount$ctl05$Ddl_Quantity\',\'\')', 0)" id="ContentPlaceHolder1_GVWAmount_Ddl_Quantity_3" class="">
+					<option selected="selected" value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+
+				</select>
+                                    </td><td class="ta-right">
+                                        <span id="ContentPlaceHolder1_GVWAmount_LblSumAmount_3" class="orange">0</span>
+                                    </td>
+			</tr>
+		</tbody></table>
+	</div>
+                    </div>
+                    <div class="table-responsive">
+                        <table>
+                            
+                            <tbody><tr>
+                                <td class="ItemWidper2 wid85per"><span id="ContentPlaceHolder1_Lbl_DonDesc">Monetary Donations : </span><input type="hidden" name="ctl00$ContentPlaceHolder1$Hdn_DonDesc" id="ContentPlaceHolder1_Hdn_DonDesc" value="2788"></td>
+                                <td class="Amntwidper2 wid15per" style="padding-right:10px">
+                                    <input name="ctl00$ContentPlaceHolder1$Txt_GenDon" type="text" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$Txt_GenDon\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;return isNumber(event)" id="ContentPlaceHolder1_Txt_GenDon" class="inputText offsetb15 ta-right" placeholder="Rs."></td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                    <div class="hedText offsetb20" style="background:none;">
+                        <div class="rightGBox">
+                            <!--<div class="totalText" style="color:black;">Total Amount:Rs. <span class="orange"><span id="ContentPlaceHolder1_Lbltotalamount"></span></span></div>-->
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$BtnAddToCart" style="float:right;background:#358597;margin-top:0px;color:white;" value="Confirm Donation" id="ContentPlaceHolder1_BtnAddToCart" class="btn Giftbtn offsetml20 btnAlin">
+                            
+                        </div>
+                    </div>
+                </div>
+</div>
+
+</div>
+
+		</div>
+		<br/>
+  </div>
+
+</div>
 <!--Footer-->
 <style>
 #footerdiv{
@@ -319,5 +478,95 @@ $(document).ready(function(){
 				google.load("feeds", "1");
 				google.setOnLoadCallback(load);
 				</script>
+
+				<script>
+					new Chart(document.getElementById("line-chart"), {
+  type: 'line',
+  data: {
+    labels: [14,15,16,17,18,19,20,21,22,23,24],
+    datasets: [{ 
+        data: [98,150,188,250,480,520,690,820,710,380,460],
+        label: "Food",
+        borderColor: "#3e95cd",
+        fill: false
+      }, { 
+        data: [48,58,98,100,210,130,100,85,75,45,35],
+        label: "Clothes",
+        borderColor: "#8e5ea2",
+        fill: false
+      }, { 
+        data: [18,45,98,150,130,86,82,72,67,73,64],
+        label: "Shelter",
+        borderColor: "#3cba9f",
+        fill: false
+      }, { 
+        data: [85,95,320,410,440,520,360,360,210,184,150],
+        label: "Health Emergency",
+        borderColor: "#e8c3b9",
+        fill: false
+      }, 
+    ]
+  },
+  options: {
+    title: {
+      display: true,
+      text: 'Contributions through Lexicon'
+    }
+  }
+});
+
+			//Close Button1 Attributes
+			document.getElementById('closeButton').addEventListener('click', function(e) {
+			e.preventDefault();
+			this.parentNode.style.display = 'none';
+	}, false);
+
+	//Close Button2 Attributes
+			document.getElementById('closeButton2').addEventListener('click', function(e) {
+			e.preventDefault();
+			this.parentNode.style.display = 'none';
+	}, false);
+
+
+//Close Button3 Attributes
+			document.getElementById('closeButton3').addEventListener('click', function(e) {
+			e.preventDefault();
+			this.parentNode.style.display = 'none';
+	}, false);
+
+	//Close Button4 Attributes
+			document.getElementById('closeButton4').addEventListener('click', function(e) {
+			e.preventDefault();
+			this.parentNode.style.display = 'none';
+	}, false);
+				</script>
+
+	<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 
 	</html>

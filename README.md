@@ -1,8 +1,5 @@
 # Sentiment Globe Data
 
-# Sample UI
-Checkout the UI & UX readme
-
 ## Globe Plotting data - 
 
 ### Original Globe plotting data
@@ -18,31 +15,21 @@ var data = [
 
 Series => Each Strip on Globe
 
-### Required Json 
+### Our Required Json 
 [ ' no.lines ' ,[ [lattitude,longitude,magnitude,lattitude,longiude,magnitude,....]] ,
 ' no.lines ' ,[ [lattitude,longitude,magnitude,lattitude,longiude,magnitude,....]] ,
 ]
 
-# Python and Backend
-
-## Data Files
-
-### Cyclone.csv 
+## Cyclone.csv 
 [ ID, convId, date , time , user id, user_name , user full name , tweet, pic, pic link, retweet count,likes,hashtag,quotes,...]
 
-### cleaned_data.csv
-[S.no,tweet]   
-Contains the tweets of cyclone.csv in cleaned manner by removing links, hashtags, Tags and emojis
-
-### Translated.csv          
-[Sno,tweet]   
-*tweets are only in english*   
-*the entire set of tweets are present in a single dataframe*
-
-## Notebook Files
-
-### ETCL.ipynb
-Performs translation and cleaning process of removing links, hashtags, tags and emojis and store only the cleaned tweets in another file.   
-Input File is *cyclone.csv*.   
-Output File is *cleaned_data.csv*
-
+## only_tweets.csv
+[Sno,tweet]
+          *the tweets can be in regional language*
+          
+## Translated.csv          
+[Sno,tweet]
+           *tweets are only in english*
+           *the entire set of tweets are present in a single dataframe*
+# Sample UI
+![screenshot 2019-01-21 at 7 38 21 pm](https://user-images.githubusercontent.com/27012182/51481513-0b2afd00-1dba-11e9-95a9-35ef24d15566.png)
