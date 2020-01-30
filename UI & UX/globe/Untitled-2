@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>Chmod777</title>
+    <meta charset="utf-8">
+
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+        <!-- Custom styles for this template -->
+
+<!-- Latest compiled and minified CSS -->
+
+    <style type="text/css">
+      html {
+        height: 100%;
+        max-height: 100%;
+        overflow-x:hidden;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        color: #ffffff;
+        font-family: verdana,arial,sans-serif;
+        font-size: 13px;
+        line-height: 20px;
+      }
+
+      #info {
+
+        font-size: 11px;
+        position: fixed;
+        bottom: 5px;
+        background-color: rgba(0,0,0,0.8);
+        border-radius: 3px;
+        right: 10px;
+        padding: 10px;
+
+      }
+
+      #currentInfo {
+        width: 340px;
+        position: absolute;
+        left: 20px;
+        top: 120px;
+
+        background-color: rgba(0,0,0,0.2);
+
+        border-top: 1px solid rgba(255,255,255,0.4);
+        padding: 10px;
+      }
+
+      a {
+        color: #aaa;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: none;
+      }
+
+
+    #logoimg{
+      width: 110px;
+      margin-top: -25px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .nav-item .nav-link{
+        font-size: 15px;
+        color: white;
+    }
+
+    .my-4{
+      font-size:25px;
+    }
+    .h2{
+      left: auto;
+      right: auto;
+    }
+
+    /**Dropdown on hover**/
+    .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* remove the gap so it doesn't close */
+  }
+
+  #navbarDropdownPortfolio:hover{
+    color:red;
+  }
+
+  .dropdown-menu{
+    background:black;
+    border-radius:10px;
+  }
+
+  .dropdown-item{
+    color:grey;
+  }
+  .dropdown-item:hover{
+    color:red;
+    text-decoration:none;
+  }
+
+  div.div1{
+    height:100%;
+    width:100%;
+    position:absolute;
+    left:0px;
+    top:0px;
+  }
+  div.div2{
+      width:100%;
+      position:relative;
+      background:none;
+      margin-top:43%;
+  }
+
+  ::-webkit-scrollbar {
+  -webkit-appearance: none;
+    width: 7px;
+}
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: grey;
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  }
+
+  #contribute:hover{
+    color:green;
+  }
+
+  #topheader{
+    background: black;
+    height: 115px;
+    max-height: auto;
+  }
+
+  .btn-default{
+    background:none;
+    color: white;
+  }
+
+  #logotxt{
+    margin-top: 25px;
+    float: left;
+    font-size: 18px;
+  }
+    </style>
+  </head>
+  <body>
+<header id="topheader">
+    <br/>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-5">
+          <a class="navbar-brand" href="index.html"><img id="logoimg" src="logowhite.png"></a>
+          <p id="logotxt">Sentimetrix</p>
+        </div>
+
+        <div class="col-sm-4">
+          
+        </div>
+
+        <div class="col-sm-3">
+
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Intensity
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="internal.html"><span id="year1990">Most Recent</span></a>
+              <a class="dropdown-item" href="##"><span id="year1995">Past 10 Days</span></a>
+              <a class="dropdown-item" href="##"><span id="year2000">Past 30 Days</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</header>
+
+
+<!--
+  <div id="currentInfo">
+    <span id="year1990" class="year"><span id="disaster">Disaster</span></span>
+    <span id="year1995" class="year">10 days</span>
+    <span id="year2000" class="year">30 days</span>
+  </div>
+
+  <div id="title">
+    Disaster Sentimental Analysis
+  </div>
+-->
+<script>
+  AOS.init();
+</script>
+
+
+<div class="fluid-container">
+
+
+      <div id="container"></div>
+    </div>
+
+    
+
+
+
+
+  <script type="text/javascript" src="/globe/third-party/Detector.js"></script>
+  <script type="text/javascript" src="/globe/third-party/three.min.js"></script>
+  <script type="text/javascript" src="/globe/third-party/Tween.js"></script>
+  <script type="text/javascript" src="/globe/globe.js"></script>
+  <script type="text/javascript">
+
+    if(!Detector.webgl){
+      Detector.addGetWebGLMessage();
+    } else {
+
+      var years = ['1990','1995','2000'];
+      var container = document.getElementById('container');
+      var globe = new DAT.Globe(container);
+
+      console.log(globe);
+      var i, tweens = [];
+
+      var settime = function(globe, t) {
+        return function() {
+          new TWEEN.Tween(globe).to({time: t/years.length},500).easing(TWEEN.Easing.Cubic.EaseOut).start();
+          var y = document.getElementById('year'+years[t]);
+          if (y.getAttribute('class') === 'year active') {
+            return;
+          }
+          var yy = document.getElementsByClassName('year');
+          for(i=0; i<yy.length; i++) {
+            yy[i].setAttribute('class','year');
+          }
+          y.setAttribute('class', 'year active');
+        };
+      };
+
+      for(var i = 0; i<years.length; i++) {
+        var y = document.getElementById('year'+years[i]);
+        y.addEventListener('mouseover', settime(globe,i), false);
+      }
+
+      var xhr;
+      TWEEN.start();
+
+
+      xhr = new XMLHttpRequest();
+      xhr.open('GET', '/globe/population909500.json', true);
+      xhr.onreadystatechange = function(e) {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            var data = JSON.parse(xhr.responseText);
+            window.data = data;
+            for (i=0;i<data.length;i++) {
+              globe.addData(data[i][1], {format: 'magnitude', name: data[i][0], animated: true});
+            }
+            globe.createPoints();
+            settime(globe,0)();
+            globe.animate();
+            document.body.style.backgroundImage = 'none'; // remove loading
+          }
+        }
+      };
+      xhr.send(null);
+    }
+
+  </script>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>

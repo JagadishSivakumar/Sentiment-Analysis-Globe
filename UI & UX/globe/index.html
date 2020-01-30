@@ -145,6 +145,7 @@
     position:absolute;
     left:0px;
     top:0px;
+    padding-top: 30px;
   }
   div.div2{
       width:100%;
@@ -163,17 +164,49 @@
     -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
   }
 
+  .card{
+    background:none;
+    color: white;
+    border: 0px;
+  }
   .card-header{
-    color:black;
+    color:red;
     font-size:18px;
+    border: 0px;
   }
 
   .card-text{
-    color:black;
+    color:white;
+    border: 0px;
+    margin-top: -20px;
   }
 
+  .card-footer{
+    border: 0px;
+  }
   #contribute:hover{
     color:green;
+  }
+
+  #listlogo{
+    width: 13px;
+    border-radius: 100%;
+  }
+
+  #disaster-list{
+    list-style: none;
+    margin-left: -40px;
+    font-size: 13px;
+  }
+
+  .btn-default{
+    background: white;
+    color: #000000;
+  }
+
+  .btn-default:hover{
+    background: rgb(148, 146, 146);
+    color: white;
   }
     </style>
   </head>
@@ -183,14 +216,13 @@
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg fixed-top" style="background:black;">
           <div class="container" style="background:black;">
             <a class="navbar-brand" href="index.html"><img id="logoimg" src="logowhite.png"></a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon" style="color:white;"></span>
-            </button>
+            
+            
             <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Catestrophe
+                Recent Update
               </a>
               <div  class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownPortfolio">
                 <a class="dropdown-item" href="internal.html"><span id="year1990">Most Recent</span></a>
@@ -198,18 +230,7 @@
                 <a class="dropdown-item" href="##"><span id="year2000">Past 30 Days</span></a>
               </div>
             </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="index.html#contributesec"><span id="contribute">Contribute</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="works.html"><span id="howworks">How it works</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html">Login/Register</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact Us</a>
-                </li>
+                
               </ul>
             </div>
           </div>
@@ -248,12 +269,19 @@
         <div class="row">
           <div class="col-lg-4 mb-4">
             <div class="card h-100">
-              <h4 class="card-header">For Volunteers</h4>
+              <h4 class="card-header">Gaja Cyclone</h4>
               <div class="card-body">
-                <p class="card-text">Lexicon is a participative drive, where like minded people come together to help people living in rapidly changing disaster environments in order to help them recover faster.</p>
+                <p class="card-text">
+                  Regions affected by Gaja Cyclone
+                </p>
+                <ul id="disaster-list">
+                  <li><img id="listlogo" src="mainlogo/red.png">  Nagapattinam <span> - Highly Receommended</span></li>
+                  <li><img id="listlogo" src="mainlogo/yellow.png">  Thiruvarur</li>
+                  <li><img id="listlogo" src="mainlogo/pink.png">  Dindugul</li>
+                </ul>
               </div>
               <div class="card-footer">
-                <a href="#" class="btn btn-primary">Join Us</a>
+                <a href="internal.html" class="btn btn-default">Contribute</a>
               </div>
             </div>
           </div>
@@ -264,7 +292,7 @@
                 <p class="card-text">Lexicon's journey would not have been possible without the trust and support of our donors who believe in a system that is big data driven disaster response.</p>
               </div>
               <div class="card-footer">
-                <a href="#" class="btn btn-primary">Register</a>
+                <a href="#" class="btn btn-default">Register</a>
               </div>
             </div>
           </div>
@@ -275,7 +303,7 @@
                 <p class="card-text">Students Club can collaborate and contribute to help the affected. This improves their team work & helps them perform overall.</p>
               </div>
               <div class="card-footer">
-                <a href="#" class="btn btn-primary">Register</a>
+                <a href="#" class="btn btn-default">Register</a>
               </div>
             </div>
           </div>
@@ -287,7 +315,7 @@
       <!--Footer-->
      <!-- Footer -->
       <div id="info">
-        <p class="m-0 text-center text-white">Designed & Developed by team <span style="color:red;">Chmod 777</span></p>
+        <p class="m-0 text-center text-white">Designed & Developed by team <span style="color:red;">Sentimetrix</span></p>
       </div>
       <!-- /.container -->
       <!--/Footer-->
