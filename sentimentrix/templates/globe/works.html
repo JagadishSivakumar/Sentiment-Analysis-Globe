@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>Recent</title>
+    <meta charset="utf-8">
+
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/theme.css">
+
+        <!--Aos Animation-->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+	    <!--Aos JS-->
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    </head>
+
+<!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container">
+            <a class="navbar-brand" href="index.html"><img id="logoimg" src="logoblack.png"></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Catestrophe
+              </a>
+              <div  class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownPortfolio">
+                <a class="dropdown-item" href="internal.html"><span id="year1990">Most Recent</span></a>
+                <a class="dropdown-item" href="##"><span id="year1995">Past 10 Days</span></a>
+                <a class="dropdown-item" href="##"><span id="year2000">Past 30 Days</span></a>
+              </div>
+            </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#contributesec"><span id="contribute">Contribute</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="works.html"><span id="howworks">How it works</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login/Register</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+	<script>
+  AOS.init();
+</script>
+        <body>
+            <div class="container" style="margin:auto;">
+                <div class="col-sm-12">
+                <div class="row">
+                <div data-aos="zoom-in">
+                    <div id="content">
+                        <b style="color:#81bcef;">What is Sentiment Analysis ?</b>
+                        <p id="answer">The process of computationally identifying and categorizing opinions expressed in a piece of text, especially in order to determine whether the writer's attitude towards a particular topic, product, etc. is positive, negative, or neutral.</p>
+
+                        <hr>
+                        <b style="color:#81bcef;">How Sentiment Analysis work?</b>
+                        <p id="answer">
+                        <ul>
+                        <li><b>Bag of Words Model:</b>
+                        <p>This model focuses completely on the words, or sometimes a string of words, but usually pays no attention to the "context" so-to-speak. The bag of words model usually has a large list, probably better thought of as a sort of "dictionary," which are considered to be words that carry sentiment. These words each have their own "value" when found in text. The values are typically all added up and the result is a sentiment valuation. The equation to add and derive a number can vary, but this model mainly focuses on the words, and makes no attempt to actually understand language fundamentals.</p>
+                        </li>
+                        
+                        <li><b>Using Natural Language Processing, and the attempt to truly "understand" the text:</b>
+                        <p>This model attempts to have the machine actually understand the sentences structures, context, and is more focused on the succession of a string of words. Usually, this structure requires the machine to have understanding of grammar principles. To do this, Natural Language Processing (NLP) techniques are used to tag parts of speech, named entities, and more, in order to actually understand the "language" of the text, and not just look for target words.</p>
+                        </li>
+                        </ul>
+                       <b><span style="color:#81bcef;">Workflow of the website</span></b>
+                    </div>
+                </div>
+                </div>
+                <div data-aos="zoom-out">
+                <div class="row" style="margin-top:3%;">
+                
+                    <img src="flowchart.png" style="max-width:100%;max-height:100%;margin:auto;">                    <br/><br/>
+                </div>
+                </div>
+                <div data-aos="zoom-in">
+                <div id="content">
+                        <b style="color:#81bcef;">Introduction to Word2Vec</b><br/>
+                        <p id="answer">Word2vec is a two-layer neural net that processes text. Its input is a text corpus and its output is a set of vectors: feature vectors for words in that corpus. While Word2vec is not a deep neural network, it turns text into a numerical form that deep nets can understand. Deeplearning4j implements a distributed form of Word2vec for Java and Scala, which works on Spark with GPUs.
+
+                        Word2vec’s applications extend beyond parsing sentences in the wild. It can be applied just as well to genes, code, likes, playlists, social media graphs and other verbal or symbolic series in which patterns may be discerned.
+                        <br/><br/>
+                        Why? Because words are simply discrete states like the other data mentioned above, and we are simply looking for the transitional probabilities between those states: the likelihood that they will co-occur. So gene2vec, like2vec and follower2vec are all possible. With that in mind, the tutorial below will help you understand how to create neural embeddings for any group of discrete and co-occurring states.
+
+                        The purpose and usefulness of Word2vec is to group the vectors of similar words together in vectorspace. That is, it detects similarities mathematically. <br/><br/>Word2vec creates vectors that are distributed numerical representations of word features, features such as the context of individual words. It does so without human intervention.<br/><br/>
+
+                        Given enough data, usage and contexts, Word2vec can make highly accurate guesses about a word’s meaning based on past appearances. Those guesses can be used to establish a word’s association with other words (e.g. “man” is to “boy” what “woman” is to “girl”), or cluster documents and classify them by topic. Those clusters can form the basis of search, sentiment analysis and recommendations in such diverse fields as scientific research, legal discovery, e-commerce and customer relationship management.
+
+                        The output of the Word2vec neural net is a vocabulary in which each item has a vector attached to it, which can be fed into a deep-learning net or simply queried to detect relationships between words.
+
+                        <br/><br/>Measuring cosine similarity, no similarity is expressed as a 90 degree angle, while total similarity of 1 is a 0 degree angle, complete overlap; i.e. Sweden equals Sweden, while Norway has a cosine distance of 0.760124 from Sweden, the highest of any other country.
+                        </p>
+
+                        <b>Sentiment signals:</b>
+                        <ul>
+                        <li>6 - Strongest positive sentiment.</li>
+                        <li>5 - Extremely strong, positive, sentiment.</li>
+                        <li>4 - Very strong, positive, sentiment.</li>
+                        <li>3 - Strong, positive sentiment.</li>
+                        <li>2 - Substantially positive sentiment.</li>
+                        <li>1 - Barely positive sentiment.</li>
+                        <li>0 - Neutral sentiment</li>
+                        <li>-1 - Sentiment trending into negatives.</li>
+                        <li>-2 - Weak negative sentiment.</li>
+                        <li>-3 - Strongest negative sentiment.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br/><br/>
+            <footer id="footerdiv">
+                <p class="m-0 text-center text-black" style="color:black;">Designed & Developed by team <span style="color:red;">Chmod 777</span></p>
+            </footer>
+            <br/>
+        </body>
+
+        </html>
