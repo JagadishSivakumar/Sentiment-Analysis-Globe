@@ -7,7 +7,7 @@ def load_index_page(request):
 	"""
 	Renders the main page and sending the required information to the globe page.
 	"""
-	context = {}
+	context = {'high':'Chennai','moderate':'Thiruvarur','low':'Dindugal'}
 	return render(request,"globe/index.html",context=context)
 
 @csrf_exempt
