@@ -10,7 +10,7 @@
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  */
-
+{% load static %}
 var DAT = DAT || {};
 
 DAT.Globe = function(container, opts) {
@@ -104,8 +104,8 @@ DAT.Globe = function(container, opts) {
     shader = Shaders['earth'];
     uniforms = THREE.UniformsUtils.clone(shader.uniforms);
 
-    uniforms['texture'].value = THREE.ImageUtils.loadTexture(imgDir+'world.jpg');
-
+    uniforms['texture'].value = THREE.ImageUtils.loadTexture("{% static 'images/globe/world.jpg' %}");
+    
     material = new THREE.ShaderMaterial({
 
           uniforms: uniforms,

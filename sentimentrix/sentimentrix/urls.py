@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
 from django.conf.urls.static import static
-from . import settings
-
+# from mainboard import views as mainboard_views
+from mainboard import views as mainboard_views
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    path('',mainboard_views.load_index_page,name="main_globe_page"),
+    path('get-globe-details',mainboard_views.get_globe_contents,name="get-globe-contens")
+] + static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)

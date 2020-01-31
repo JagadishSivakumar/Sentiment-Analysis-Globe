@@ -1,21 +1,17 @@
+{% load static %}
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <title>Chmod777</title>
+    <title>Sentimentrix</title>
     <meta charset="utf-8">
-
         <!-- Bootstrap core CSS -->
-        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+        <link href="{% static 'css/globe/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <!-- Custom styles for this template -->
 
 <!-- Latest compiled and minified CSS -->
-
     <style type="text/css">
       html {
         height: 100%;
@@ -25,15 +21,13 @@
       body {
         margin: 0;
         padding: 0;
-        background: #000000 url(/globe/loading.gif) center center no-repeat;
+        background: #000000 url("{% static 'images/globe/loading.gif' %}") center center no-repeat;
         color: #ffffff;
         font-family: verdana,arial,sans-serif;
         font-size: 13px;
         line-height: 20px;
       }
-
       #info {
-
         font-size: 11px;
         position: fixed;
         bottom: 5px;
@@ -41,34 +35,27 @@
         border-radius: 3px;
         right: 10px;
         padding: 10px;
-
       }
-
       #currentInfo {
         width: 340px;
         position: absolute;
         left: 20px;
         top: 120px;
-
         background-color: rgba(0,0,0,0.2);
-
         border-top: 1px solid rgba(255,255,255,0.4);
         padding: 10px;
       }
-
-      a {
+      a{
         color: #aaa;
         text-decoration: none;
       }
       a:hover {
         text-decoration: none;
       }
-
       .bull {
         padding: 0 5px;
         color: #555;
       }
-
       #title {
         position: absolute;
         top: 80px;
@@ -79,10 +66,6 @@
         font: 20px Georgia;
         padding: 10px;
       }
-
-
-
-
       #ce {
         max-width: 100%;
         background: none;
@@ -91,123 +74,117 @@
         padding-top:200%;
       }
 
-    #divbox{
+      #divbox{
+        background: red;
+      }
+      #logoimg{
+        position: absolute;
+        width: 100px;
+        margin-top: -25px;
+        max-width: 100%;
+      }
 
-      background: red;
+      .nav-item .nav-link{
+          font-size: 15px;
+          color: white;
+      }
 
+      .my-4{
+        font-size:25px;
+      }
+      .h2{
+        left: auto;
+        right: auto;
+      }
+      /**Dropdown on hover**/
+      .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0; /* remove the gap so it doesn't close */
+      }
+      #navbarDropdownPortfolio:hover{
+        color:red;
+      }
+
+      .dropdown-menu{
+        background:black;
+        border-radius:10px;
+      }
+
+      .dropdown-item{
+        color:grey;
+      }
+      .dropdown-item:hover{
+        color:red;
+        text-decoration:none;
+      }
+
+      div.div1{
+        height:100%;
+        width:100%;
+        position:absolute;
+        left:0px;
+        top:0px;
+        padding-top: 30px;
+      }
+      div.div2{
+          width:100%;
+          position:relative;
+          background:none;
+          margin-top:43%;
+      }
+
+    ::-webkit-scrollbar {
+    -webkit-appearance: none;
+      width: 7px;
+  }
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: grey;
+      -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
     }
-    #logoimg{
-      position: absolute;
-      width: 100px;
-      margin-top: -25px;
-      max-width: 100%;
-    }
 
-    .nav-item .nav-link{
-        font-size: 15px;
-        color: white;
-    }
-
-    .my-4{
-      font-size:25px;
-    }
-    .h2{
-      left: auto;
-      right: auto;
-    }
-
-    /**Dropdown on hover**/
-    .dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0; /* remove the gap so it doesn't close */
-  }
-
-  #navbarDropdownPortfolio:hover{
-    color:red;
-  }
-
-  .dropdown-menu{
-    background:black;
-    border-radius:10px;
-  }
-
-  .dropdown-item{
-    color:grey;
-  }
-  .dropdown-item:hover{
-    color:red;
-    text-decoration:none;
-  }
-
-  div.div1{
-    height:100%;
-    width:100%;
-    position:absolute;
-    left:0px;
-    top:0px;
-    padding-top: 30px;
-  }
-  div.div2{
-      width:100%;
-      position:relative;
+    .card{
       background:none;
-      margin-top:43%;
-  }
+      color: white;
+      border: 0px;
+    }
+    .card-header{
+      color:red;
+      font-size:18px;
+      border: 0px;
+    }
 
-  ::-webkit-scrollbar {
-  -webkit-appearance: none;
-    width: 7px;
-}
-  ::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background-color: grey;
-    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
-  }
+    .card-text{
+      color:white;
+      border: 0px;
+      margin-top: -20px;
+    }
 
-  .card{
-    background:none;
-    color: white;
-    border: 0px;
-  }
-  .card-header{
-    color:red;
-    font-size:18px;
-    border: 0px;
-  }
+    .card-footer{
+      border: 0px;
+    }
+    #contribute:hover{
+      color:green;
+    }
 
-  .card-text{
-    color:white;
-    border: 0px;
-    margin-top: -20px;
-  }
+    #listlogo{
+      width: 13px;
+      border-radius: 100%;
+    }
 
-  .card-footer{
-    border: 0px;
-  }
-  #contribute:hover{
-    color:green;
-  }
-
-  #listlogo{
-    width: 13px;
-    border-radius: 100%;
-  }
-
-  #disaster-list{
-    list-style: none;
-    margin-left: -40px;
-    font-size: 13px;
-  }
-
-  .btn-default{
-    background: white;
-    color: #000000;
-  }
-
-  .btn-default:hover{
-    background: rgb(148, 146, 146);
-    color: white;
-  }
+    #disaster-list{
+      list-style: none;
+      margin-left: -40px;
+      font-size: 13px;
+    }
+    .btn-default{
+      background: white;
+      color: #000000;
+    }
+    .btn-default:hover{
+      background: rgb(148, 146, 146);
+      color: white;
+    }
     </style>
   </head>
   <body>
@@ -215,9 +192,7 @@
         <!-- Navigation -->
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg fixed-top" style="background:black;">
           <div class="container" style="background:black;">
-            <a class="navbar-brand" href="index.html"><img id="logoimg" src="logowhite.png"></a>
-            
-            
+            <a class="navbar-brand" href="index.html"><img id="logoimg" src="{% static 'images/globe/logowhite.png' %}"></a>
             <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
@@ -265,7 +240,6 @@
       <!-- Page Content -->
       <div class="container">
         <h1 class="my-4">Be a part of us</h1>
-
         <div class="row">
           <div class="col-lg-4 mb-4">
             <div class="card h-100">
@@ -275,9 +249,9 @@
                   Regions affected by Gaja Cyclone
                 </p>
                 <ul id="disaster-list">
-                  <li><img id="listlogo" src="mainlogo/red.png">  Nagapattinam <span> - Highly Receommended</span></li>
-                  <li><img id="listlogo" src="mainlogo/yellow.png">  Thiruvarur</li>
-                  <li><img id="listlogo" src="mainlogo/pink.png">  Dindugul</li>
+                  <li><img id="listlogo" src="{% static 'images/globe/mainlogo/red.png' %}">  Nagapattinam <span> - Highly Receommended</span></li>
+                  <li><img id="listlogo" src="{% static 'images/globe/mainlogo/yellow.png' %}">  Thiruvarur</li>
+                  <li><img id="listlogo" src="{% static 'images/globe/mainlogo/pink.png' %}">  Dindugul</li>
                 </ul>
               </div>
               <div class="card-footer">
@@ -319,10 +293,10 @@
       </div>
       <!-- /.container -->
       <!--/Footer-->
-  <script type="text/javascript" src="/globe/third-party/Detector.js"></script>
-  <script type="text/javascript" src="/globe/third-party/three.min.js"></script>
-  <script type="text/javascript" src="/globe/third-party/Tween.js"></script>
-  <script type="text/javascript" src="/globe/globe.js"></script>
+  <script type="text/javascript" src="{% static 'js/globe/third-party/Detector.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/globe/third-party/three.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/globe/third-party/Tween.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/globe/globe.js' %}"></script>
   <script type="text/javascript">
 
     if(!Detector.webgl){
@@ -358,14 +332,50 @@
 
       var xhr;
       TWEEN.start();
+      // xhr = new XMLHttpRequest();
+      // xhr.open('GET', '{% static "files/globe/population909500.json" %}', true);
+      // xhr.onreadystatechange = function(e) {
+      //   if (xhr.readyState === 4) {
+      //     if (xhr.status === 200) {
+      //       var data = JSON.parse(xhr.responseText);
+      //       window.data = data;
+      //       for (i=0;i<data.length;i++) {
+      //         globe.addData(data[i][1], {format: 'magnitude', name: data[i][0], animated: true});
+      //       }
+      //       globe.createPoints();
+      //       settime(globe,0)();
+      //       globe.animate();
+      //       document.body.style.backgroundImage = 'none'; // remove loading
+      //     }
+      //   }
+      // };
+      // xhr.send(null);
+      function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+      }
 
-
-      xhr = new XMLHttpRequest();
-      xhr.open('GET', '/globe/population909500.json', true);
-      xhr.onreadystatechange = function(e) {
-        if (xhr.readyState === 4) {
-          if (xhr.status === 200) {
-            var data = JSON.parse(xhr.responseText);
+      var csrftoken = getCookie('csrftoken')
+      $(document).ready(function(){
+        $.ajax({
+          type:'POST',
+          url:'/get-globe-details',
+          data:{
+            csrfmiddlewaretoken:csrftoken
+          },
+          success:function(datas){
+            var data = datas.globe;
             window.data = data;
             for (i=0;i<data.length;i++) {
               globe.addData(data[i][1], {format: 'magnitude', name: data[i][0], animated: true});
@@ -375,16 +385,15 @@
             globe.animate();
             document.body.style.backgroundImage = 'none'; // remove loading
           }
-        }
-      };
-      xhr.send(null);
+        })
+      });
     }
 
   </script>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'css/globe/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'css/globe/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
   </body>
 

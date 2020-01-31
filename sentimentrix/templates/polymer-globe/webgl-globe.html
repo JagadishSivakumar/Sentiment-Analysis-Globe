@@ -61,7 +61,7 @@
     var material = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true });
     var smaterial = new THREE.ShaderMaterial({
       uniforms: {
-        texture: { type: 't', value: THREE.ImageUtils.loadTexture('world.jpg') }
+        texture: { type: 't', value: THREE.ImageUtils.loadTexture("{% static 'images/polymer-globe/world.jpg' %}") }
       },
       vertexShader: self.$.earthvs.innerText,
       fragmentShader: self.$.earthfs.innerText
