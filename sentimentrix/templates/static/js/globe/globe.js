@@ -10,7 +10,7 @@
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  */
-{% load static %}
+
 var DAT = DAT || {};
 
 DAT.Globe = function(container, opts) {
@@ -102,9 +102,11 @@ DAT.Globe = function(container, opts) {
     var geometry = new THREE.SphereGeometry(200, 40, 30);
 
     shader = Shaders['earth'];
+    
+    THREE.ImageUtils.crossOrigin = '';
     uniforms = THREE.UniformsUtils.clone(shader.uniforms);
 
-    uniforms['texture'].value = THREE.ImageUtils.loadTexture("{% static 'images/globe/world.jpg' %}");
+    uniforms['texture'].value = THREE.ImageUtils.loadTexture("https://upload.wikimedia.org/wikipedia/commons/8/8f/Whole_world_-_land_and_oceans_12000.jpg");
     
     material = new THREE.ShaderMaterial({
 
