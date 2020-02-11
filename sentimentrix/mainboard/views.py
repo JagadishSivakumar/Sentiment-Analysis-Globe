@@ -18,3 +18,10 @@ def get_globe_contents(request):
 	context = {}
 	context['globe'] = [["1990",[11,79,0.7,10,79,1.3,10,79,1.1,10,79,1.2,10,79,1.4,10,78,1.4,8,78,0.9,9,78,0.8,10,77,1.2]],["1995",[11,79,0.9,10,79,1.2,10,79,1,10,79,1.2,10,79,1.2,10,78,1.3,8,78,0.8,9,78,0.7,10,77,1.1]],["2000",[11,79,1.1,10,79,1,10,79,1.2,10,79,1.8,10,79,1.7,10,78,1.5,8,78,1,9,78,0.9,10,77,1.3]]]
 	return JsonResponse(context)
+
+def render_internal_page(request):
+	"""
+	Rendering internal.html and its required content
+	"""
+	context={}
+	return render(request, "globe/internal.html", context=context)
