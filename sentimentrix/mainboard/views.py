@@ -7,7 +7,7 @@ def load_index_page(request):
 	"""
 	Renders the main page and sending the required information to the globe page.
 	"""
-	context = {'high':'Chennai','moderate':'Thiruvarur','low':'Dindugal'}
+	context = {}
 	return render(request,"globe/index.html",context=context)
 
 @csrf_exempt
@@ -21,9 +21,7 @@ def get_globe_contents(request):
 
 def render_internal_page(request):
 	"""
-	Rending internal.html and its required content
+	Rendering internal.html and its required content
 	"""
-
 	context={}
 	return render(request, "globe/internal.html", context=context)
-
