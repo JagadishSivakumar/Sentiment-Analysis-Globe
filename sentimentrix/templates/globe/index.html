@@ -4,12 +4,24 @@
   <head>
     <title>Sentimentrix</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Bootstrap core CSS -->
         <link href="{% static 'css/globe/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/globe/css/theme.css' %}" rel="stylesheet">
+
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <!-- Custom styles for this template -->
+
+        <!--Fav Icons-->
+        <link rel="shortcut icon" href="{% static 'images/globe/logoblack.png' %}" type="image/x-icon">
+        <!--/Fav Icons-->
+
+        <!--Logo Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lemonada&display=swap" rel="stylesheet">
+        <!--/Logo Fonts-->
 
 <!-- Latest compiled and minified CSS -->
     <style type="text/css">
@@ -77,12 +89,11 @@
       #divbox{
         background: red;
       }
-      #logoimg{
-        position: absolute;
-        width: 100px;
-        margin-top: -25px;
-        max-width: 100%;
-      }
+
+      #logohead{
+					position: absolute;
+					font-family: 'Lemonada', cursive;
+				}
 
       .nav-item .nav-link{
           font-size: 15px;
@@ -192,8 +203,7 @@
         <!-- Navigation -->
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg fixed-top" style="background:black;">
           <div class="container" style="background:black;">
-            <a class="navbar-brand" href="index.html"><img id="logoimg" src="{% static 'images/globe/logowhite.png' %}"></a>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
+            <a class="navbar-brand" href="index.html"><span id="logohead">Sentimetrix</span></a>            <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -249,9 +259,9 @@
                   Regions affected by Gaja Cyclone
                 </p>
                 <ul id="disaster-list">
-                  <li><img id="listlogo" src="{% static 'images/globe/mainlogo/red.png' %}"> {{high}} <span> - Highly Receommended</span></li>
-                  <li><img id="listlogo" src="{% static 'images/globe/mainlogo/yellow.png' %}"> {{moderate}}</li>
-                  <li><img id="listlogo" src="{% static 'images/globe/mainlogo/pink.png' %}"> {{low}}</li>
+                  <li><img id="listlogo" src="{% static 'images/globe/mainlogo/red.png' %}">  Nagapattinam <span> - Highly Receommended</span></li>
+                  <li><img id="listlogo" src="{% static 'images/globe/mainlogo/yellow.png' %}">  Thiruvarur</li>
+                  <li><img id="listlogo" src="{% static 'images/globe/mainlogo/pink.png' %}">  Dindugul</li>
                 </ul>
               </div>
               <div class="card-footer">
@@ -369,7 +379,7 @@
       var csrftoken = getCookie('csrftoken')
       $(document).ready(function(){
         $.ajax({
-          type:'GET',
+          type:'POST',
           url:'/get-globe-details',
           data:{
             csrfmiddlewaretoken:csrftoken
