@@ -22,5 +22,6 @@ from mainboard import views as mainboard_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',mainboard_views.load_index_page,name="main_globe_page"),
-    path('get-globe-details',mainboard_views.get_globe_contents,name="get-globe-contens")
+    path('get-globe-details',mainboard_views.get_globe_contents,name="get-globe-contens"),
+    path('internal',mainboard_views.render_internal_page,name="internal-page"),
 ] + static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)

@@ -255,7 +255,7 @@
                 </ul>
               </div>
               <div class="card-footer">
-                <a href="internal.html" class="btn btn-default">Contribute</a>
+                <a href="{% url 'internal-page' %}" class="btn btn-default">Contribute</a>
               </div>
             </div>
           </div>
@@ -369,7 +369,7 @@
       var csrftoken = getCookie('csrftoken')
       $(document).ready(function(){
         $.ajax({
-          type:'POST',
+          type:'GET',
           url:'/get-globe-details',
           data:{
             csrfmiddlewaretoken:csrftoken
