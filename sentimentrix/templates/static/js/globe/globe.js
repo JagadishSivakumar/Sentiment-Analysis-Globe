@@ -105,9 +105,7 @@ DAT.Globe = function(container, opts) {
     
     THREE.ImageUtils.crossOrigin = '';
     uniforms = THREE.UniformsUtils.clone(shader.uniforms);
-
-    uniforms['texture'].value = THREE.ImageUtils.loadTexture("https://upload.wikimedia.org/wikipedia/commons/8/8f/Whole_world_-_land_and_oceans_12000.jpg");
-    
+    uniforms['texture'].value = THREE.ImageUtils.loadTexture(fileLocation);
     material = new THREE.ShaderMaterial({
 
           uniforms: uniforms,
