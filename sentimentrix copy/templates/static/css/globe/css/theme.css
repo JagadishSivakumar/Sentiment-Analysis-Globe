@@ -1,0 +1,323 @@
+    /**Page**/
+      html {
+          height: 100%;
+          max-height: 100%;
+          overflow-x: hidden;
+      }
+
+      body {
+          margin: 0;
+          padding: 0;
+          background:white;
+          color: #ffffff;
+          font-family: verdana,
+          arial,
+          sans-serif;
+          font-size: 22px;
+          font-size: 13px;
+          line-height: 20px;
+      }
+
+        .active{
+            color:red;
+        }
+        
+        td> .btn{
+            width: 80px;
+        }
+
+        td> .btn-success{
+            width: 100px;
+        }
+        /**Tags**/
+        #labelstag{
+            background:#F8F9FA;
+            border-radius:5px;
+            margin-right:10px;
+        }
+
+        @media only screen and (max-width:800px){
+            .mapouter{
+                margin-right: 10%;
+                width: 300px;
+                max-width: 100%;
+                float: left;
+                padding-top: 15px;
+            }
+        }
+        #closeButton{
+            background:none;
+            height: 0%;
+            margin-left:3px;
+            color: #d85757;
+        }
+
+        #closeButton2{
+            background: none;
+            height: 0%;
+            margin-left: 3px;
+            color: #d85757;
+        }
+
+        #closeButton3{
+            background: none;
+            height: 0%;
+            margin-left: 3px;
+            color: #d85757;
+        }
+
+        #closeButton4
+        {
+            background: none;
+            height: 0%;
+            margin-left: 3px;
+            color: #d85757;
+        }
+
+        #question{
+            color: black;
+            margin: auto;
+        }
+
+        #content {
+            padding-top:3%;
+            
+            max-width: 80%;
+            margin: 0 auto;
+            color: black;
+            text-align:justify;
+            font-size:15px;
+        }
+
+        #howworks:hover{
+            color:#81bcef;
+        }
+        /**Navbar**/
+        /**Dropdown on hover**/
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0; 
+        }
+
+        .nav-item .nav-link {
+                font-size: 15px;
+                color: white;
+            }
+
+        #navbarDropdownPortfolio:hover {
+            color: red;
+        }
+
+        .dropdown-menu {
+            background:#F8F9FA;
+            border-radius: 10px;
+        }
+
+        .dropdown-item {
+            color: grey;
+        }
+
+        .dropdown-item:hover {
+            color: red;
+            text-decoration: none;
+        }
+
+        div.div1 {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        div.div2 {
+            width: 100%;
+            position: relative;
+            background: none;
+            margin-top: 43%;
+        }
+
+        ::-webkit-scrollbar {
+            -webkit-appearance: none;
+            width: 7px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            background-color: grey;
+            -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+        }
+
+        .card-header {
+            color: black;
+            font-size: 18px;
+        }
+
+        .card-text {
+            color: black;
+        }
+
+        #contribute:hover {
+            color: green;
+        }
+
+        /**Logo**/
+        #logoimg {
+            position: absolute;
+            width: 100px;
+            margin-top: -25px;
+            max-width: 100%;
+        }
+
+        .buttonsdiv .btn{
+            margin:3px;
+            margin-left: 8px;
+        }
+
+        .buttonsdiv{
+            background: grey;
+            border-radius:5px;
+        }
+        #recentbutton{
+            font-size: 15px;
+             color: black
+        }
+
+        table{
+            border: 0px solid black;
+        }
+
+        th{
+            color: black;
+        }
+        tr{
+            background:none;
+            border: 0.5px solid #ddd;
+        }
+
+        td{
+            background:white;
+            color: black;
+            height: 50px;
+
+        }
+
+        /**Modal Box**/
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        #modaltxt{
+            color: #000;
+            font-size:18px;
+        }
+        
+        #modalp{
+            color:#000;
+            font-size:18px;
+        }
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 71%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        input{
+            margin-top:-10px;
+        }
+        #formtxt{
+            color: black;
+        }
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #intensityhigh{
+            font-size:20px;
+            color:red;
+        }
+
+        #intensitymedium{
+            font-size:20px;
+            color: #81bcef;
+        }
+
+        #intensityless{
+            font-size:20px;
+            color:#aaaaaa;
+        }
+        /**Graph Data**/
+
+        #timeToRender {
+            position: absolute;
+            top: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #d85757;
+            padding: 0px 4px;
+            color: #ffffff;
+        }
+
+        #feedControl {
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 440px;
+        }
+    
+            .col-sm-4{
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .col-sm-8{
+                max-width: 100%;
+            }
+
+            #tableimg{
+                width: 10px;
+                height: 10px;
+            }
+          
+            #footerdiv{
+                background: grey;
+            }
+
+
+#gridcont{
+    background: red;
+}
+        

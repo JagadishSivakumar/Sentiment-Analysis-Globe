@@ -1,0 +1,432 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>Contribute</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		<!--Logo Fonts-->
+		<link href="https://fonts.googleapis.com/css?family=Lemonada&display=swap" rel="stylesheet">
+		<!--/Logo Fonts-->
+				
+		<!--Fav Icons-->
+		<link rel="shortcut icon" href="{% static 'images/globe/logoblack.png' %}" type="image/x-icon">
+		<!--/Fav Icons-->
+		
+				
+			<style type="text/css">
+				@import url("http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.css");
+
+				#feedControl {
+				margin-top : 10px;
+				margin-left: auto;
+				margin-right: auto;
+				width : 440px;
+				font-size: 12px;
+				color: #9CADD0;
+				}
+
+				#logohead{
+					position: absolute;
+					margin-top: -15px;
+					font-family: 'Lemonada', cursive;
+				}
+
+				.nav-item{
+					margin-left: 15px;
+					margin-right:15px;
+				}
+
+				#usericon{
+					width:26px;
+					max-width: 100%;
+					opacity: 0.8;
+				}
+
+				#authorityinfodiv{
+					background: none;
+					max-width: 100%;
+					
+				}
+
+				#authoritytxt{
+					background:rgb(219, 217, 217);
+					height: 400px;
+					max-height: 100%;
+					max-width: 100%;
+					overflow: scroll;
+					box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  					transition: 0.3s;
+				}
+
+				.dangertxt{
+					color: rgb(211, 87, 87);
+					text-align: center;
+				}
+
+				.lowtxt{
+					color:rgb(83, 138, 83);
+					text-align: center;
+				}
+
+				.phnnum{
+					color: black;
+				}
+
+				.payopt{
+					width:60px;
+					max-width: 100%;
+					height: 100%;
+				}
+
+				@media only screen and (max-width:768px){
+					#mapsection{
+						margin-top: 25px;
+					}
+				}
+
+				</style>
+
+
+	</head>
+
+	        <!-- Navigation -->
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="container">
+				  <a class="navbar-brand" href="index.html"><span id="logohead">Sentimetrix</span></a>
+				  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				  </button>
+				  
+				  <div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+				  
+					<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Organisation
+					</a>
+					<div  class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownPortfolio">
+					  <a class="dropdown-item" href="internal.html"><span id="year1990">Nagapattinam</span></a>
+					  <a class="dropdown-item" href="##"><span id="year1995">Thiruvarur</span></a>
+					  <a class="dropdown-item" href="##"><span id="year2000">Dindigul</span></a>
+					</div>
+				  </li>
+				  
+					  <!--
+					  <li class="nav-item">
+						  <a class="nav-link" href="login.html">Login/Register</a>
+					  </li>
+					  -->
+					  <li class="nav-item">
+						<a class="nav-link" href="##">
+							<span><img id="usericon" src="{% static 'images/globe/login.png' %}"></span>
+						Login/Sign Up</a>
+					  </li>
+					</ul>
+				  </div>
+				</div>
+			  </nav>
+
+		
+
+		
+	<body>
+<div class="container" id='mainbody'>
+	<div class="row py-3">
+	
+		<div class="col-sm-5" id="authorityinfodiv">
+			<!--Authorities Info Center-->
+			<h4>Latest Anouncements/ Updates</h4>
+			
+			<div class="container" id="authoritytxt">
+				<ul>
+					<li>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius blanditiis, ipsam in vel nisi, voluptas minus expedita eligendi deserunt fuga est, assumenda molestiae! Officia, harum quos accusantium quis aperiam saepe!</p>
+					</li>
+
+					<li>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius blanditiis, ipsam in vel nisi, voluptas minus expedita eligendi deserunt fuga est, assumenda molestiae! Officia, harum quos accusantium quis aperiam saepe!</p>
+					</li>
+
+					<li>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius blanditiis, ipsam in vel nisi, voluptas minus expedita eligendi deserunt fuga est, assumenda molestiae! Officia, harum quos accusantium quis aperiam saepe!</p>
+					</li>
+
+					<li>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius blanditiis, ipsam in vel nisi, voluptas minus expedita eligendi deserunt fuga est, assumenda molestiae! Officia, harum quos accusantium quis aperiam saepe!</p>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+		<div class="col-sm-7 text-center" id="mapsection">
+			<div class="mapouter" style="float:left;max-width: 100%;"><div class="gmap_canvas"><iframe width="600" max-width="100%" height="430" max-height="100%" margin-top="30px" id="gmap_canvas" src="https://google.org/crisismap/google.com/2018-gaja?hl=en&llbox=32.48%2C-3.24%2C123.43%2C39.06&t=ROADMAP&layers=1&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{text-align:right;height:430px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:430px;width:100%;}</style></div>
+		</div>
+
+	</div>
+
+	<div class="fluid-container py-3">
+		<h4>Some Intro</h4>
+		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, dicta harum. Numquam earum mollitia eaque dignissimos? Quos consectetur debitis eligendi omnis, natus perspiciatis nobis deserunt nam, aliquam tenetur odio doloribus?</p>
+	</div>
+
+	<div class="fluid-conatainer text-center py-3" style="overflow-x:auto;">
+		<table id="myTable" class="table table-striped" >  
+			<thead>  
+	
+					<!--Top Label-->
+			  <tr>  
+							<th>Location</th>  
+							<th>Requirements</th>
+							<th>Intensity</th> 
+							<th>Emergency</th> 
+							<th>Make Contributions</th>
+			  </tr>  
+	
+						<!--/Top Label-->
+			</thead>  
+			<tbody>  
+
+				<style>
+					
+				</style>
+					
+					<!--1-->
+					<tr>  
+							<td>Nagapattinam</td>  
+							<td>
+								Food, Shelter, Clothes
+
+							
+							</td> 
+							<td><span class="dangertxt">High</span></td> 
+							<td><a class="phnnum" href="tel:1077">9790778532</a></td>
+							<td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal"><span id="myBtn">Contribute</span></button></td>
+					  </tr>  
+					  
+					  <!--/1-->
+
+					  <!--2-->
+					  <tr>  
+						<td>Chennai</td>  
+						<td>
+							Food, Shelter, Clothes
+
+						
+						</td> 
+						<td><span class="lowtxt">Low</span></td> 
+						<td><a class="phnnum" href="tel:1077">9790778532</a></td>
+						<td><button type="button" class="btn btn-success"><span id="myBtn">Contribute</span></button></td>
+		  				</tr>  
+					  <!--/2-->
+
+
+					<!--3-->
+					<tr>  
+						<td>Nagapattinam</td>  
+						<td>
+							Food, Shelter, Clothes
+						
+						</td> 
+						<td><span class="dangertxt">High</span></td> 
+						<td><a class="phnnum" href="tel:1077">9790778532</a></td>
+						<td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal"><span id="myBtn">Contribute</span></button></td>
+				  </tr>  
+				  
+				  <!--/3-->
+
+				  <!--4-->
+				  <tr>  
+					<td>Chennai</td>  
+					<td>
+						Food, Shelter, Clothes
+
+					
+					</td> 
+					<td><span class="lowtxt">Low</span></td> 
+					<td><a class="phnnum" href="tel:1077">9790778532</a></td>
+					<td><button type="button" class="btn btn-success"><span id="myBtn">Contribute</span></button></td>
+					  </tr>  
+				  <!--/4-->
+	
+			  
+	
+			 
+			   
+			 
+			  
+			</tbody>  
+		  </table>  
+	</div>
+
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+           <!-- Modal content -->
+  <div class="container modal-content">
+	<br/>
+    <h4 class="text-center">Make Contribution</h4>
+		<p id="modalp">Select the organization you want to contribute through</p>
+		<p id="modalp"><b>Organization :</b></p>
+		<select style="max-width:100%">
+			<option value="orga">BHARATH INSTITUTE OF HIGHER EDUCATION AND RESEARCH</option>
+			<option value="orgb">Bharath Environment Seva Team</option>
+			<option value="orgc">BHARATH ZION FOUNDATION</option>
+			<option value="orgd">BHARATHA TAMIL THAI HELPING HANDS TRUST</option>
+			<option value="orge">Bharathamatha Family Welfare Foundation</option>
+			<option value="orgf">Bharathiya Jeevan Dhara Environment and Renaissance Society (BJDERS)</option>
+		</select>
+	<br/><br/>
+		<div class="col-sm-12">
+                    <div id="EmergencyReliefGrid" class="table-responsive">
+                        <div>
+		<table cellspacing="5" cellpadding="5" id="ContentPlaceHolder1_GVWAmount" style="width:100%;">
+			<tbody><tr style="color:White;background-color:#358597;font-weight:bold;">
+				<th class="dnone wid5per" scope="col" style="color:white;">Select</th><th class="ItemWidper wid50per" scope="col" style="color:white;">Provision</th><th class="ta-right" scope="col" style="color:white;">Value (Rs.)</th><th class="wid15per ta-right" scope="col" style="color:white;">Quantity</th><th class="Amntwidper ta-right wid15per" scope="col" style="color:white;">Amount (Rs.)</th>
+			</tr><tr>
+				<td class="dnone">
+                                        <span class="CheckboxSize"><input id="ContentPlaceHolder1_GVWAmount_ChkSelect_0" type="checkbox" name="ctl00$ContentPlaceHolder1$GVWAmount$ctl02$ChkSelect" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$GVWAmount$ctl02$ChkSelect\',\'\')', 0)"></span>
+                                    </td><td>
+                                        <span id="ContentPlaceHolder1_GVWAmount_LblDescription_0"><span style="color:#816cef;">Food Items for a family:</span> Rice, lentil, cooking oil, iodized salt, biscuits, drinking water</span><p></p>
+                                    </td><td class="ta-right">
+                                        <span id="ContentPlaceHolder1_GVWAmount_LblAmount_0" class="orange">600</span>
+                                    </td><td class="ta-right">
+                                        
+                                        <select name="ctl00$ContentPlaceHolder1$GVWAmount$ctl02$Ddl_Quantity" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$GVWAmount$ctl02$Ddl_Quantity\',\'\')', 0)" id="ContentPlaceHolder1_GVWAmount_Ddl_Quantity_0" class="">
+					<option selected="selected" value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+
+				</select>
+                                    </td><td class="ta-right">
+                                        <span id="ContentPlaceHolder1_GVWAmount_LblSumAmount_0" class="orange">0</span>
+                                    </td>
+			</tr><tr>
+				<td class="dnone">
+                                        <span class="CheckboxSize"><input id="ContentPlaceHolder1_GVWAmount_ChkSelect_1" type="checkbox" name="ctl00$ContentPlaceHolder1$GVWAmount$ctl03$ChkSelect" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$GVWAmount$ctl03$ChkSelect\',\'\')', 0)"></span>
+                                    </td><td>
+                                        <span id="ContentPlaceHolder1_GVWAmount_LblDescription_1"><span style="color:#816cef;">Non-Food Items for a family: </span>Candles, Mosquito coils, Flooring mat, lungi for men, saree for women, towels, blankets, sanitary pads </span><p></p>
+                                    </td><td class="ta-right">
+                                        <span id="ContentPlaceHolder1_GVWAmount_LblAmount_1" class="orange">1100</span>
+                                    </td><td class="ta-right">
+                                        
+                                        <select name="ctl00$ContentPlaceHolder1$GVWAmount$ctl03$Ddl_Quantity" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$GVWAmount$ctl03$Ddl_Quantity\',\'\')', 0)" id="ContentPlaceHolder1_GVWAmount_Ddl_Quantity_1" class="">
+					<option selected="selected" value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+
+				</select>
+                                    </td><td class="ta-right">
+                                        <span id="ContentPlaceHolder1_GVWAmount_LblSumAmount_1" class="orange">0</span>
+                                    </td>
+			</tr><tr>
+				<td class="dnone">
+                                        <span class="CheckboxSize"><input id="ContentPlaceHolder1_GVWAmount_ChkSelect_2" type="checkbox" name="ctl00$ContentPlaceHolder1$GVWAmount$ctl04$ChkSelect" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$GVWAmount$ctl04$ChkSelect\',\'\')', 0)"></span>
+                                    </td><td>
+                                        <span id="ContentPlaceHolder1_GVWAmount_LblDescription_2"><span style="color:#816cef;">Temporary shelter for a family: </span> Tarpaulin, rope</span><p></p>
+                                    </td><td class="ta-right">
+                                        <span id="ContentPlaceHolder1_GVWAmount_LblAmount_2" class="orange">1150</span>
+                                    </td><td class="ta-right">
+                                        
+                                        <select name="ctl00$ContentPlaceHolder1$GVWAmount$ctl04$Ddl_Quantity" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$GVWAmount$ctl04$Ddl_Quantity\',\'\')', 0)" id="ContentPlaceHolder1_GVWAmount_Ddl_Quantity_2" class="">
+					<option selected="selected" value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+
+				</select>
+                                    </td><td class="ta-right">
+                                        <span id="ContentPlaceHolder1_GVWAmount_LblSumAmount_2" class="orange">0</span>
+                                    </td>
+			</tr><tr>
+				<td class="dnone">
+                                        <span class="CheckboxSize"><input id="ContentPlaceHolder1_GVWAmount_ChkSelect_3" type="checkbox" name="ctl00$ContentPlaceHolder1$GVWAmount$ctl05$ChkSelect" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$GVWAmount$ctl05$ChkSelect\',\'\')', 0)"></span>
+                                    </td><td>
+                                        <span id="ContentPlaceHolder1_GVWAmount_LblDescription_3"><span style="color:#816cef;">Emergency Kit:</span> Food items, non-food items and temporary shelter for two families</span><p></p>
+                                    </td><td class="ta-right">
+                                        <span id="ContentPlaceHolder1_GVWAmount_LblAmount_3" class="orange">5500</span>
+                                    </td><td class="ta-right">
+                                        
+                                        <select name="ctl00$ContentPlaceHolder1$GVWAmount$ctl05$Ddl_Quantity" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$GVWAmount$ctl05$Ddl_Quantity\',\'\')', 0)" id="ContentPlaceHolder1_GVWAmount_Ddl_Quantity_3" class="">
+					<option selected="selected" value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+
+				</select>
+                                    </td><td class="ta-right">
+                                        <span id="ContentPlaceHolder1_GVWAmount_LblSumAmount_3" class="orange">0</span>
+                                    </td>
+			</tr>
+		</tbody></table>
+	</div>
+                    </div>
+                    <div class="container text-center">
+						<h4>Monetory Donation</h4>
+						<br/>
+						<div class="row">
+							<div class="col">
+								<img class="payopt" src="{% static 'images/globe/gpay.png' %}">
+							</div>
+
+							<div class="col">
+								<img class="payopt" src="{% static 'images/globe/phonepe.png' %}">
+							</div>
+
+							<div class="col">
+								<img class="payopt" src="{% static 'images/globe/paytm.png' %}">
+							</div>
+						</div>
+						<br/>
+                    </div>
+                    <div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Contribute</button>
+					  </div>
+                </div>
+
+      
+    </div>
+  </div>
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>Lexicon Login</title>
+    <meta charset="utf-8">
+
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/theme.css">
+
+        <!--Aos Animation-->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+	    <!--Aos JS-->
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    </head>
+
+<style>
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 40%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+<!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container">
+            <a class="navbar-brand" href="index.html"><img id="logoimg" src="logoblack.png"></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Catestrophe
+              </a>
+              <div  class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownPortfolio">
+                <a class="dropdown-item" href="internal.html"><span id="year1990">Most Recent</span></a>
+                <a class="dropdown-item" href="##"><span id="year1995">Past 10 Days</span></a>
+                <a class="dropdown-item" href="##"><span id="year2000">Past 30 Days</span></a>
+              </div>
+            </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#contributesec"><span id="contribute">Contribute</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="works.html"><span id="howworks">How it works</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="login.html"><span id="howworks">Login/Register</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+	<script>
+  AOS.init();
+</script>
+        <body>
+            <div class="container" style="margin:auto;">
+                <div class="col-sm-12">
+                <div class="row">
+                <div data-aos="zoom-in">
+                    <div id="content">
+                    <footer id="footerdiv">
+                        <p class="m-0 text-center text-black" style="color:black;font-size:20px;"><b>Be a part of us</b></p>
+                    </footer>
+                        <br/>
+                        <b style="color:#81bcef;">For Volunteers</b>
+                        <p id="answer">Lexicon is a participative drive, where like minded people come together to help people living in rapidly changing disaster environments in order to help them recover faster.</p>
+                        <hr>
+                        <b style="color:#81bcef;">For Donors</b>
+                        <p id="answer">Lexicon's journey would not have been possible without the trust and support of our donors who believe in a system that is big data</p>
+                        <hr>
+                        <b style="color:#81bcef;">For Educational Institutions</b>
+                        <p id="answer">Lexicon's journey would not have been possible without the trust and support of our donors who believe in a system that is big data</p>
+                        <hr>
+                        </div>
+                    </div>
+                </div>
+                <style>
+                    .btn{
+                        margin:10px;
+                    }
+                </style>
+            <div data-aos="zoom-out">
+                <div class="row" style="margin-top:3%;margin-left:90px;">
+                            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;border-radius:5px;">Login</button>
+                </div>
+            </div>
+
+            <div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="dummy.jpg" style="width:100px;max-width:100%;" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+ 
+                
+            <br/><br/>
+            <footer id="footerdiv" style="margin-top:20%">
+                <p class="m-0 text-center text-black" style="color:black;">Designed & Developed by team <span style="color:red;">Chmod 777</span></p>
+            </footer>
+            <br/>
+        </body>
+
+        </html>
