@@ -1,0 +1,145 @@
+/*
+ * CSSMap plugin - THEMES
+ * version: 5.5
+ * web: http://cssmapsplugin.com
+ *
+ * author: Łukasz Popardowski { Winston_Wolf }
+ * license: http://cssmapsplugin.com/license
+ * FAQ: http://cssmapsplugin.com/faq
+ *
+ * email: http://cssmapsplugin.com/contact
+ * twitter: @CSSMapplugin
+*/
+
+/* ---------------------------------------------------------------------------------------------------- *
+                                       TOOLTIPS - DEFAULT
+ * ---------------------------------------------------------------------------------------------------- */
+.cssmap > li a,.cssmap > li a:hover,.cssmap-tooltip-content{
+  background: #111;
+  background: rgba(0,0,0,.8);
+  color: #eee;
+  font: normal 12px 'Lucida Grande',Arial,Helvetica,sans-serif;
+  padding: .4em 1em;
+  text-align: center;
+  text-shadow: 0 1px 0 #000;
+  white-space: nowrap;
+  -moz-border-radius: .4em;
+  -ms-border-radius: .4em;
+  -webkit-border-radius: .4em;
+  border-radius: .4em;
+ }
+ .cssmap-1450 .cssmap > li a,.cssmap-1280 .cssmap > li a{ font-size: 14px }
+ .cssmap-650 .cssmap > li a{ font-size: 11px }
+ .cssmap-540 .cssmap > li a,.cssmap-430 .cssmap > li a,.cssmap-320 .cssmap > li a,
+ .cssmap-250 .cssmap > li a,.cssmap-210 .cssmap > li a{ font-size: 10px !important}
+
+    /* tooltip arrow; when you change its size don't forget to set tooltipArrowHeight option in the cssMap(); function */
+    .cssmap > li a .tooltip-arrow{
+      bottom: -5px; /* must be the same as a border-width */
+      border: solid;
+      border-color: #111 transparent;
+      border-color: rgba(0,0,0,.8) transparent;
+      border-width: 5px 5px 0 5px; /* this's a height of the arrow */
+      margin-left: -5px; /* must be the same as a border-width */
+    }
+    .cssmap > li a.tooltip-right .tooltip-arrow{
+      margin-right: -5px; /* must be the same as a tooltip-arrow border-width */
+    }
+    .cssmap > li a.tooltip-top .tooltip-arrow{ /* set tooltip under the arrow */
+      border-width:0 5px 5px 5px;
+      top: -5px;
+    }
+
+  .cssmap > li a small,.cssmap > li a:hover small,.cssmap-tooltip-content small,
+  .cssmap > li a abbr,.cssmap > li a:hover abbr,.cssmap-tooltip-content abbr{ display:block; font-size: .8em }
+
+/* MARKER/PIN TOOLTIP */
+.cssmap-pin .cssmap-tooltip-content{
+  padding: 1em;
+  text-align:left;
+  white-space: normal;
+  max-width: 15em
+ }
+
+/* ---------------------------------------------------------------------------------------------------- *
+                                  WHITE STYLE TOOLTIPS
+ * ---------------------------------------------------------------------------------------------------- */
+.cssmap-dark li a,.cssmap-dark li a:hover,.cssmap-tooltip-content.cssmap-dark{background:#eee;background: rgba(255,255,255,.9);border:2px solid #fff;color:#333;font-weight: bold;text-shadow:0 .1em 0 #fff;-moz-border-radius:.4em;-webkit-border-radius:.4em;border-radius:.4em}
+ .cssmap-dark li a .tooltip-arrow{bottom:-7px;border:solid;border-color:#fff transparent;border-width:7px 7px 0 7px;content:"";display:block;left:50%;margin-left:-7px;position:absolute;width:0}
+ .cssmap-dark li a.tooltip-right .tooltip-arrow{margin-right: -7px}
+ .cssmap-dark li a.tooltip-top .tooltip-arrow{border-width:0 7px 7px 7px;top: -7px}
+
+/* ---------------------------------------------------------------------------------------------------- *
+                                 VINTAGE STYLE TOOLTIPS
+ * ---------------------------------------------------------------------------------------------------- */
+.cssmap-vintage li a,.cssmap-vintage li a:hover,.cssmap-tooltip-content.cssmap-vintage{background: #333;border:2px solid #e9e8c9;color:#f5f5f5;text-shadow:0 1px 0 #000;-moz-border-radius:.6em;-ms-border-radius:.6em;-webkit-border-radius:.6em;border-radius:.6em;-moz-box-shadow:0 0 4px #736357;-webkit-box-shadow:0 0 4px #736357;box-shadow:0 0 4px #736357}
+ .cssmap-vintage li a .tooltip-arrow{bottom:-7px;border:solid;border-color:#e9e8c9 transparent;border-width:7px 7px 0 7px;content:"";display:block;left:50%;margin-left:-7px;position:absolute;width:0}
+ .cssmap-vintage li a .tooltip-arrow:after{bottom:3px;border:solid;border-color:#333 transparent;border-width:4px 4px 0 4px;content:"";display:block;left:50%;margin-left:-4px;position:absolute;width:0}
+ .cssmap-vintage li a.tooltip-right .tooltip-arrow{margin-right: -7px}
+ .cssmap-vintage li a.tooltip-top .tooltip-arrow{border-width:0 7px 7px 7px;top: -7px}
+
+/* ---------------------------------------------------------------------------------------------------- *
+                                 VISIBLE LIST OF REGIONS
+ * ---------------------------------------------------------------------------------------------------- */
+.cssmap-visible-list a{}
+  /* SELECTED REGION */
+  .cssmap-visible-list a:hover,.cssmap-visible-list a:focus,.cssmap-visible-list li.focus a{}
+  /* ACTIVE REGION */
+  .cssmap-visible-list a:active,.cssmap-visible-list li.active-region a{}
+
+/* ---------------------------------------------------------------------------------------------------- *
+                        SEARCH LINK - SHOWN IN THE MULTIPLE CLICKS MODE
+ * ---------------------------------------------------------------------------------------------------- */
+.cssmap-search-link{
+  bottom:0;
+  right:0
+ }
+ /* SELECTED SEARCH LINK */
+ a.cssmap-search-link:hover,a.cssmap-search-link:focus{}
+
+/* ---------------------------------------------------------------------------------------------------- *
+                                        NAVIGATION
+ * ---------------------------------------------------------------------------------------------------- */
+.cssmap-navigation{ text-align: center }
+
+  /* LIST OF NAVIGATION CONTROLS */
+  .cssmap-nav-list{}
+   .cssmap-nav-list li{
+     display:inline-block;
+     margin: 0 .5em;
+    }
+    .cssmap-nav-next{} /* LIST ITEM */
+    .cssmap-nav-prev{} /* LIST ITEM */
+    .cssmap-nav-separator{} /* LIST ITEM */
+
+  /* LABEL OF THE NAVIGATION - THE H5 HEADER (OPTIONAL) */
+  .cssmap-nav-label{}
+
+  /* DESCRIPTION SHOWN ABOVE THE NAVIGATION (OPTIONAL) */
+  .cssmap-nav-description{}
+
+/* ---------------------------------------------------------------------------------------------------- *
+                                        PRELOADER
+ * ---------------------------------------------------------------------------------------------------- */
+.cssmap-loader{
+  background: #111;
+  background: rgba(0,0,0,.8);
+  color: #eee;
+  font: normal 14px 'Lucida Grande',Arial,sans-serif;
+  padding: .4em 1em;
+  text-shadow: 0 1px 0 #000;
+  -moz-border-radius: .4em;
+  -ms-border-radius: .4em;
+  -webkit-border-radius: .4em;
+  border-radius: .4em;
+ }
+ .cssmap-1450 .cssmap-loader,.cssmap-1280 .cssmap-loader{font-size:16px}
+ .cssmap-540 .cssmap-loader,.cssmap-430 .cssmap-loader{font-size:12px}
+ .cssmap-320 .cssmap-loader{font-size:11px}
+ .cssmap-250 .cssmap-loader{font-size:10px}
+ .cssmap-210 .cssmap-loader{font-size:9px}
+
+/* ---------------------------------------------------------------------------------------------------- *
+ *                               DO NOT EDIT FROM THIS POINT!
+ * ---------------------------------------------------------------------------------------------------- */
+.cssmap-container{margin:0 auto;overflow:hidden;padding:0 !important;position:relative} .cssmap-container,.cssmap-container *,.cssmap-markers-container,.cssmap-markers-container *{-moz-box-sizing: content-box !important;-webkit-box-sizing: content-box !important;box-sizing: content-box !important;-moz-backface-visibility: hidden;-ms-backface-visibility: hidden;-o-backface-visibility: hidden;-webkit-backface-visibility: hidden;backface-visibility: hidden} .cssmap{border:0 none !important;display:block;left:0;margin:0 !important;list-style:none !important;padding:0 !important;position:relative} .cssmap > li{height:0;width:0} .cssmap > li a{height:auto;margin:0 0 0 -9999px;position:absolute;text-decoration:none;width:auto;z-index:89} .cssmap > li a:focus{outline:0 none} .cssmap-container span,.cssmap-cities{display:block;height:0;left:0;position:absolute;top:-9999px;width:0} .cssmap > li a.tooltip-right{left:auto;right:0;width:auto} .cssmap > li a .tooltip-arrow{left:50%;top:auto} .cssmap > li a.tooltip-middle .tooltip-arrow{display:none} .cssmap > li a.tooltip-top .tooltip-arrow{bottom:auto} .cssmap > li a.tooltip-right .tooltip-arrow{left:auto} #cssmap-tooltip{position:absolute;z-index:999} .cssmap-container .cssmap-cities{top:0;z-index:88} .cssmap .bg{padding:10px} .cssmap .active-region .bg{z-index:87} .cssmap .m{cursor:pointer;z-index:99} .cssmap .m span{z-index:89} .cssmap-visible-list-container{margin:0;overflow:hidden;position:relative;z-index:300} .cssmap-pins,.cssmap-visible-list{list-style:none;padding-left:0;padding-right:0} .cssmap-marker img{border:0 none} span.cssmap-loader{height:auto;position:absolute;text-align:center;width:auto;z-index:90} .cssmap-error{margin:2em 0;text-align:left;width:100%} .cssmap-signature{clear:both;font-size:10px;margin:1em 0;overflow:hidden;position:relative;text-align:center;width:100%} .cssmap-signature a{text-decoration: none !important} .cssmap-search-link{position:absolute;z-index:100 !important}

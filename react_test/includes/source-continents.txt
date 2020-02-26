@@ -1,0 +1,12 @@
+<!-- CSSMap - Continents -->
+<div id="map-continents">
+ <ul class="continents">
+  <li class="c1"><a href="#africa">Africa</a></li>
+  <li class="c2"><a href="#asia">Asia</a></li>
+  <li class="c3"><a href="#australia">Australia</a></li>
+  <li class="c4"><a href="#europe">Europe</a></li>
+  <li class="c5"><a href="#north-america">North America</a></li>
+  <li class="c6"><a href="#south-america">South America</a></li>
+ </ul>
+</div>
+<!-- END OF THE CSSMap - Continents -->

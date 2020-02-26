@@ -1,0 +1,19 @@
+{
+  "name": "react_test",
+  "version": "1.0.0",
+  "description": "Natural Disaster Recovery and Management",
+  "main": "index.html",
+  "dependencies": {
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+  "build": "webpack-scaffold"
+},
+  "keywords": [
+    "ndrm",
+    "sentimetrix"
+  ],
+  "author": "JAgadish Sivakumar",
+  "license": "ISC"
+}
