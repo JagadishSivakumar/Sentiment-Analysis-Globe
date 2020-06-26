@@ -35,7 +35,7 @@ Series => Each Strip on Globe
 ![screenshot 2019-01-21 at 7 38 21 pm](https://user-images.githubusercontent.com/27012182/51481513-0b2afd00-1dba-11e9-95a9-35ef24d15566.png)
 
 ### Credits 
-- Vishwak senan and Sripaad srinivasan
+- Vishwak senan and Sripaad srinivasan are active contributors
 - WebGL Earth [https://www.webglearth.com/] 
 
 
