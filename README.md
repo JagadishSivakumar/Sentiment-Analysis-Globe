@@ -1,8 +1,8 @@
 # Sentiment Globe Data
 
-## Globe Plotting data - 
+### Globe Plotting data - 
 
-### Original Globe plotting data
+**Original Globe plotting data**
 var data = [ 
 
 ['A Series',[lattitude,longitude,magnitude,lattitude,longiude,magnitude,....]] , 
@@ -20,16 +20,22 @@ Series => Each Strip on Globe
 ' no.lines ' ,[ [lattitude,longitude,magnitude,lattitude,longiude,magnitude,....]] ,
 ]
 
-## Cyclone.csv 
+### Cyclone.csv 
 [ ID, convId, date , time , user id, user_name , user full name , tweet, pic, pic link, retweet count,likes,hashtag,quotes,...]
 
-## only_tweets.csv
+### only_tweets.csv
 [Sno,tweet]
           *the tweets can be in regional language*
           
-## Translated.csv          
+### Translated.csv          
 [Sno,tweet]
            *tweets are only in english*
            *the entire set of tweets are present in a single dataframe*
-# Sample UI
+### Sample UI
 ![screenshot 2019-01-21 at 7 38 21 pm](https://user-images.githubusercontent.com/27012182/51481513-0b2afd00-1dba-11e9-95a9-35ef24d15566.png)
+
+### Credits 
+- Vishwak senan and Sripaad srinivasan
+- WebGL Earth [https://www.webglearth.com/] 
+
+
