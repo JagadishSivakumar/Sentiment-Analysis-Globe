@@ -31,7 +31,7 @@ Series => Each Strip on Globe
 [Sno,tweet]
            *tweets are only in english*
            *the entire set of tweets are present in a single dataframe*
-### Sample UI
+### Sentiment Analysis for Gaja Cyclone
 ![screenshot 2019-01-21 at 7 38 21 pm](https://user-images.githubusercontent.com/27012182/51481513-0b2afd00-1dba-11e9-95a9-35ef24d15566.png)
 
 ### Credits 
